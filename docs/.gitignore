@@ -1,0 +1,27 @@
+# Entorno virtual
+# Ignora la carpeta del entorno virtual para no subir las dependencias.
+venv/
+
+# Ficheros de compilación de la documentación de Sphinx
+# Estos ficheros se generan automáticamente.
+docs/_build/
+
+# Caché de Python y ficheros compilados
+__pycache__/
+*.pyc
+
+# Ficheros de configuración de IDEs y editores
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Artefactos de compilación y distribución
+build/
+dist/
+*.egg-info/
+
+# Artefactos de tests
+.pytest_cache/
+htmlcov/
+.coverage
