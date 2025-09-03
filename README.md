@@ -1,2 +1,1 @@
-Aqui iran los archivos de los apuntes de clase de 2ASIR 
-
+Archivos de los apuntes de 2Asir
