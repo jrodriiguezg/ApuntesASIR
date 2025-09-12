@@ -1,4 +1,4 @@
-.. _admin-sistemas-operativos:
+.. _administracion-de-sistemas-operativos:
 
 Administración de sistemas operativos
 =====================================
@@ -9,6 +9,6 @@ Aquí encontrarás la documentación para la asignatura de Administración de si
    :maxdepth: 2
    :caption: Temas
 
-  Aspectos-básicos-de-administracion.md
-  Instalación-y-configuración-de-Linux.md
+  Aspectos-básicos-de-administracion
+  Instalación-y-configuración-de-Linux
   
