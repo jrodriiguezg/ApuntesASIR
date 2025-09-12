@@ -9,6 +9,6 @@ Aquí encontrarás la documentación para la asignatura de Administración de si
    :maxdepth: 2
    :caption: Temas
 
-  Aspectos-básicos-de-administracion
-  Instalación-y-configuración-de-Linux
+  Aspectos-básicos-de-administracion.md
+  Instalación-y-configuración-de-Linux.md
   
