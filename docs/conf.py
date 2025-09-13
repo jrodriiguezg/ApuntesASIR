@@ -16,7 +16,7 @@ author = 'jrodriigueg'
 extensions = [
 	'sphinx.ext.autodoc',
 	'sphinx.ext.napoleon',
-        'myst_parser'
+    'myst_parser',
 
 ]
 
@@ -31,3 +31,7 @@ language = 'es'
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 master_doc = 'index'
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
