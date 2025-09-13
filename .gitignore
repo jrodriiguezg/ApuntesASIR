@@ -1,17 +1,15 @@
-# Archivos de compilación de generadores de sitios estáticos (como MkDocs)
-site/
-docs/_build/
-docs/venv/
+# Archivos y directorios de Read the Docs y Sphinx
+_build/
+_readthedocs/
 
-# Archivos de caché de Python
+# Archivos de entorno y caché
+.venv/
+env/
+venv/
 *.pyc
 __pycache__/
 
-# Archivos específicos del editor
-.idea/
-.vscode/
-*.swp
-*~
+# Archivos de registro y bases de datos locales
+*.log
+*.db
 
-# Archivos específicos del sistema operativo
-.DS_Store
