@@ -1,0 +1,17 @@
+# Archivos de compilación de generadores de sitios estáticos (como MkDocs)
+site/
+docs/build/
+docs/venv/
+
+# Archivos de caché de Python
+*.pyc
+__pycache__/
+
+# Archivos específicos del editor
+.idea/
+.vscode/
+*.swp
+*~
+
+# Archivos específicos del sistema operativo
+.DS_Store
