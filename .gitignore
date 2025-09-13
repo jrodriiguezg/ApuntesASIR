@@ -1,6 +1,6 @@
 # Archivos de compilación de generadores de sitios estáticos (como MkDocs)
 site/
-docs/build/
+docs/_build/
 docs/venv/
 
 # Archivos de caché de Python
