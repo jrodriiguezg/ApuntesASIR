@@ -1,13 +1,5 @@
 # Tema 1 - ASPECTOS BÁSICOS DE ADMINISTRACIÓN
 
-1. Tareas del administrador
-2. Hardware del servidor
-   1. CPD
-   2. Sistemas rack
-   3. Sistemas RAID
-   4. Servidores
-3. Software del servidor
-
 ## 1. Tareas del administrador
 
 Un sistema informático necesita una configuración inicial y una atención continua para funcionar correctamente.
