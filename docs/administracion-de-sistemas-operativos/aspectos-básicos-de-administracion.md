@@ -57,7 +57,7 @@ Existen varios factores de forma de un servidor como pueden ser:
 
 Es una estanteria o armario donde los servidores se colocan uno encima de otro, esto permite que los servidores ocupen menor espacio, para una mejor ventilacion. El formato mas utilizado es el Rack 19" 
 
-#### 2.3.2. RAID 
+### 2.4. RAID 
 
 El **RAID** es un grupo de discos que actuan como un unico esto permite conseguir o mejor velocidad o tolerancia a fallos, segun el tipo de RAID a usar (hay 6 niveles)
 
@@ -70,6 +70,22 @@ Divide los datos en bloques y los escribe en varios discos simultaneamente, ofre
 Crea una copia exacta de los datos de un disco en otro (espejo), ofrece una buena redundancia dado que si un disco falla el otro tiene una copia completa de los datos, su desventaja es que la capacidad total es de solo un disco, si tienes dos discos de 1Tb solo tendras 1Tb de capacidad 
 
 ![raid1](images/raid1.png)
+
+**RAID 5 - Striping con paridad distribuida**
+Combina el RAID 0 con un dato de paridad que se distribuye equitativamente entre todos los discos, ofrece buen equilibrio entre rendimiento, capacidad y redundancia, puede tolerar fallos en un solo disco sin perder datos, la desventaja es que la recuperacion de datos despues de un fallo puede ser lento (requiere minimo tres discos)
+
+![raid5](images/raid5.png)
+
+
+**RAID 6 - Striping con doble paridad**
+Similar al RAID 5 pero con un segundo bloque de paridad lo que permite tolerancia a fallos en dos discos duros, ofrece mayor redundancia que el RAID 5 pero requiere de mas discos duros (minimo 4)
+
+![raid6](images/raid6.png)
+
+**RAID 10 (RAID 1 + 0)**
+Combina el mirroring con el striping, los discos se clonan en espero primero y luego se agrupan como un RAID 0, ofrece un excelente rendimiento de lectura/escritura y alta redundancia, puede soportar fallos en varios discos duros 
+
+![raid10](images/raid10.jpg)
 
 
 
