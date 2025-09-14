@@ -95,7 +95,7 @@ Combina el mirroring con el striping, los discos se clonan en espero primero y l
 - **RAID por Hardware**
    Se usa un controlador fisico generalmente una tarjeta PCI, que gestino las discos de manera independiente al sistema operativo, ofrece un rendimiento superior al tener su propio procesador y ram, suelen tener caracteristicas mas avanzadas que el RAID por software 
 
-   ### 2.5. NAS 
+### 2.5. NAS 
    
    Es un dispositivo fisico que se instala en una red local y que ofrece una unidad de almacenamiento dedicada y centralizada a la que se accede a traves de la red, funciona como una nube privada, en el sistema operativo se monta como una unidad de red, estan diseñados especificamente para el almacenamiento de datos por lo que incluyen software especializado y capacidades de RAID. 
    **Algunas de sus caracteristicas son:**
