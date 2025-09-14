@@ -87,9 +87,26 @@ Combina el mirroring con el striping, los discos se clonan en espero primero y l
 
 ![raid10](images/raid10.jpg)
 
+#### 2.4.1 Tipos de RAID
 
+- **Raid por Software**
+   Se implementa en el kernel en la parte encargada de la gestion de discos, es una solucion menos costosa y funciona con todos los discos y no depende de un hardware especifico, no ofrece el mejor rendimiento ya que es la CPU del sistema la que realiza la gestion, un ejemplo de este RAID es el driver del kernel de Linux (mdadm) 
 
+- **RAID por Hardware**
+   Se usa un controlador fisico generalmente una tarjeta PCI, que gestino las discos de manera independiente al sistema operativo, ofrece un rendimiento superior al tener su propio procesador y ram, suelen tener caracteristicas mas avanzadas que el RAID por software 
 
+   ### 2.5. NAS 
+   
+   Es un dispositivo fisico que se instala en una red local y que ofrece una unidad de almacenamiento dedicada y centralizada a la que se accede a traves de la red, funciona como una nube privada, en el sistema operativo se monta como una unidad de red, estan diseñados especificamente para el almacenamiento de datos por lo que incluyen software especializado y capacidades de RAID. 
+   **Algunas de sus caracteristicas son:**
+   
+- **Centralizacion de datos:** Permiten a varios usuarios acceder y almacenar datos de manera simultanea en una misma ubicacion, eliminando el problema de tener datos en diferentes equipos 
+- **Acceso remoto:** Algunos NAS permiten usarse como una nube privada accesible desde cualquier lugar, otros requieren de una configuracion mas avanzada 
+- **Facilidad de uso:** Un NAS suele disponer de una interfaz WEB facil de usar lo que facilita su uso y configuracion 
+- **Escalabilidad:** Muchos modelos permiten añadir mas discos duros lo que permite ampliar el almacenamiento 
+- **Soluciones DIY:** Existen opciones codigo abierto para montar tu propio NAS haciendo uso de pcs comunes o una raspberry pi, estos software pueden ser  [TrueNAS](https://www.truenas.com/) o [OpenMediaVault](https://www.openmediavault.org/)
+
+![NAS](images/nas.jpg)
 
 
 
