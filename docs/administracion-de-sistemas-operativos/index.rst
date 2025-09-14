@@ -9,7 +9,7 @@ Aquí encontrarás la documentación para la asignatura de Administración de si
 
    proyecto
    aspectos-básicos-de-administracion
-   instalacion-y-configuracion-de-Linux
+   instalación-y-configuración-de-Linux
 
 
 
