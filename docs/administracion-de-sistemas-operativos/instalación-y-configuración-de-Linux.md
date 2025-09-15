@@ -77,4 +77,174 @@ El comando mkfs (make file system) se usa para formatear una particion usando el
 
 ![Arbol de directorios](images/directorios.jpg)
 
+## 5. Entorno de escritorio
+Un entorno de escritorio es un conjunto de programas que permiten interactuar con el sistema operativo de manera visual, ofreciendonos la opcion de gestionar un sistema Linux de una forma mas facil y amigable 
 
+Dentro de los entornos de escritorio tenemos diferentes tipos segun su administrador de ventanas, por ejemplo tenemos administradores de ventanas flotantes usados en entornos de escritorio de ahora en adelante **DE** (para abreviar) como Gnome, KDE, Xfce, etc
+Y luego tenenmos administradores de ventanas en mosaico (Tilling Window), como pueden ser I3, Sway, Awesome
+
+La primera imagen muestra un **Tilling Window** la segunda muestra **Gnome**
+
+![tillinWindow](images/twindow.jpg)
+![Gnome](images/gnome.png)
+
+## 6. Consolas 
+Linux dispone de 6 consolas virtuales, que pueden ser usadas para varias tareas desde la resolucion de problemas, la seguridad y la administracion o realizar multitarea sin usar una interfaz grafica 
+
+Para acceder a estas terminales, hacemos uso de la combinacion de teclas **Ctrl + Alt + FX** donde la **X** es el numero de la consola que se quiere usar, por ejemplo para acceder a la consola 2 (tty2) usariamos **F2**
+
+Para volver al entorno grafico usamos **Alt + F7**
+
+## 7. Shell 
+Una shell es un interprete de comandos permite interactuar con el sistema operativo mediante una interfaz de texto, cuando se abre una terminal y se escribe un comando es la shell la que recibe la orden y le dice al sistema operativo que hacer, hay diferentes tipos de shell: 
+
+- **Bourne shell (sh):** Es de las primeras que se empezo a usar ya no se usa casi aunque se puede encontrar en sistemas embebidos como routers que usan (imagenes de linux para ejecutar sus programas)
+- **Bourne-Again Shell (bash):** Es la mas usada en la actualidad en sistemas linux y MacOs es la evolucion de sh pero añadiendo mejoras como autocompletado 
+- **Z shell (zsh):** Esta basada en bash pero añadiendo muchas mejoras, como soporte para plugins, y personalizacion avanzada
+- **Friendly interactive shell (fish):** Se creo con el objetivo de ser amigable y facil de usar nada mas instalarla, incluye autocompletacion, resaltado de sintaxis y sugerencias 
+La siguiente imagen muestra fish con la personalizacion que tengo aplicada en mi sistema 
+
+![fish](images/fish.png)
+
+## 7. Dispositivos especiales 
+En linux existen una serie de dispositivos que se usan para la comunicacion entre programas estos son los flujos de informacion, y encontramos tres: 
+
+- **Entrada estandar (stdin):** Se representa con el numero **0** es el canal por el cual un programa recibe datos. Por lo general la entrada proviene del teclado del usuario pero tambien puede provenir de otro programa 
+- **Salida estandart (stdout):** Se representa con el numero **1** es el canal por el cual un programa envia sus resultados normales. La salida estandart de un comando generalmente se muestra en pantalla 
+- **Error estandart (stderr):** Se representa con el numero **2** es el canal por el cual un programa envia un mensaje de error o diagnostico. Por lo general tambien se muestran por pantalla estos mensajes 
+
+Estos flujos son importantes para el uso de la linea de comandos sobretodo al trabajar con ShellScript, ya que permiten redirigir la entrada y la salida de los programas.
+
+## 8. Tuberiasy redirecciones 
+Permiten anidar comandos o pasar informacion de unos a otros.
+
+- **La tuberia ( | ):** Permite conectar la salida de un comandos a le entrada de otro, creando una cadena sucesiva de comandos, por ejemplos al hacer un cat a un fichero de texto podemos usar una tuberia para pasar la salida a un grep y filtrar 
+
+```cat mi_archivo.txt | grep manzana ``` 
+
+- **Redirecciones:** Permiten dcontrolar la salida de un archivo
+    - **>:** Redirecciona la salida estandart de un comando a un archivo
+    - **>>:** Añade la salida a un archivo sin borrar su contenido 
+    - **<:** Redirecciona la entrada de un comando para que la reciba un archivo 
+    - **2>:** Redirecciona un error de un comando a un archivo
+    - **2>>:** Añade el error a un archivo existente
+    - **<&2:** Redirecciona la salida estandart para que se mezcle con un error estandart
+
+## 9. Comodines 
+Los comodines son caracteres especiales que usa la shell para emparejar patrones en nombres de archivos, tambien permiten seleccionar varios archivos a la vez
+
+- **Asterisco (*):** Coincide con cero o mas caracteres. Por ejemplo ``` rm *.txt ``` borrara todos los archivos que terminen en **.txt**
+- **Interrogacion (?):** Coincide con exactamente un solo caracter. Por ejemplos ``` ls archivo?.log ``` listara archivos como **archivo1.log** , **archivo2.log** 
+- **Corchetes ([]):** Coincide con cualquiera de los caracteres listados dentro de los corchetes. Por ejemplo ``` mv foto[1-3].jpg fotos ``` movera los archivos **foto1.jpg** , **foto2.jpg** , **foto3.jpg**  a la carpeta fotos 
+
+## 10. Comandos de manejo de ficheros 
+Estos son los comandos mas comunes en cuanto al manejo de ficheros en Linux 
+
+### 10.1 Navegacion y listado: 
+
+- **pwd:** Imprime el directorio de trabajo actual 
+- **cd:** Cambia el directorio 
+- **ls:** Lista el contenido de un directorio 
+
+### 10.2 Creacion y eliminacion: 
+
+- **mkdir:** Crea nuevos directorios 
+- **touch:** Crea un nuevo fichero vacio 
+- **rm:** Elimina ficheros y directorios
+- **ln:** Crea enlaces entre ficheros 
+
+### 10.3 Copia y movimiento:
+
+- **cp:** Copia ficheros y directorios 
+- **mv:** Mueve ficheros y directorios 
+
+### 10.4 Visualizacion y manipulacion:
+
+- **cat:** Muestra el contenido de un fichero por pantalla 
+- **more y less:** Muestra el contenido de un fichero por paginas 
+- **head:** Muestra las primeras lineas de un fichero (10)
+- **tail:** Muestra las ultimas lineas de un fichero (10)
+
+### 10.5 Permisos y propiedad:
+
+- **chmod:** Cambia los permisos de un fichero
+- **chown:** Cambia el propietario de un fichero o directorio 
+- **chgrp:** Cambia el grupo de un fichero o directorio 
+
+### 10.6 Busqueda de ficheros y texto: 
+
+- **find:** Busca ficheros y directorios en una jerarquia de archivos 
+- **grep:** Busca patrones de texto dentro de ficheros 
+
+### 10.7 Compresion y verificacion: 
+
+- **zip y bzip2:** Comprimen y descomprimen ficheros 
+- **md5sum:** Calcula y verifica la suma de verificacion MD5
+
+### 10.8 Filtros:
+
+- **sort:** Ordena las linas de un archivo de texto o la salida de otro comando, por defecto por orden alfabetico 
+- **cut:** Recorta secciones de cada linea de archivos 
+- **uniq:** Filtra lineas repetidas en un archivo
+- **wc:** Cuenta el numero de lineas, palabras y caracteres de un archivo o salida de un comando 
+- **tee:** Lee la entrada estándar y la escribe tanto en la salida estándar (pantalla) como en uno o más archivos. Es como una "T" en una tubería, dividiendo el flujo
+
+## 11. Gestion de paquetes 
+La forma mas facil y comun de instalar software en Linux a diferencia de Windows es por medio de un gestor de paquetes, segun la familia de la distribucion que usemos encontramos varios gestores de paquetes.
+
+- **Distribuciones derivadas de debian (.deb):** Usan el gestor de paquetes apt (aptitude) y como gestor de bajo nivel se usa dpkg 
+- **Distribcuiones derivadas de RedHat (.rpm):** Usan el gestor de paquetes dnf actualmente en su version 5 (yum ya esta en deshuso y usarlo solo lleva a un enlace simbolico a dnf), el gestor de bajo nivel es rpm 
+- **Distribuciones derivadas de ArchLinux (tar.gz):** Usan el gestor de paquetes pacman y pacma para el repositorio de la comunidad (AUR), como tal no tiene paquetes si no que coge el codigo fuente y lo compila en ese momento 
+
+### 11.1 Gestores de paquetes universales 
+Los anteriores eran gestores de paquetes especificos de cada distribucion, pero luego encontramos unos gestores de paquetes que funcionan en todas las distribuciones independientemente la familia de la que vengan (normalmente estos paquetes se ejecutan en modo sandbox).
+
+- **Snap:** Desarollado por canonical, permite empaquetar los programas y que sean usados en cualquier distribucion, su uso es ``` snap install [paquete] ```
+- **Flatpak:** Al igual que snap pero mas extendido y con un catalogo de programas mayor, esta financiado por redhat, su uso es ``` flatpak install [paquete] ``` 
+- **Appimage:** Este mas que un gestor de paquetes es una extension universal que se ejecuta en todas las distribuciones linux, permite crear apps portables 
+
+## 12. WGET 
+
+wget es una herramienta que permite descargar archivos de internet por medio de la terminal y en segundo plano, se usa ampliamente para descargar scripts o instaladores, tambien permite descargas recursivas 
+
+## 13. Gestion de paquetes 
+
+### 13.1 Instalacion de paquetes:
+
+**Instalacion de paquetes:**
+- Familia debian: ```sudo apt install [paquete]``` 
+- Familia RHEL: ``` sudo dnf install [paquete]``` 
+- Familia ArchLinux: ```sudo pacman -S [paquete]```
+
+**Actualizar base de datos de paquetes:**
+- Familia debian: ```sudo apt update ``` 
+- Familia RHEL: ``` sudo dnf update``` 
+- Familia ArchLinux: ```sudo pacman -Sy```
+
+**Instalar actualizacion despues de actualizar base de datos:**
+- Familia debian: ```sudo apt upgrade``` 
+- Familia RHEL: ` Podemos hacer un dnf upgrade, pero el comando update ya incluye esta opcion 
+- Familia ArchLinux: ```sudo pacman -Syu```
+
+**Eliminar paquetes:**
+- Familia debian: ```sudo apt remove [paquete]``` 
+- Familia RHEL: ```sudo dnf remove [paquete]```
+- Familia ArchLinux: ```sudo pacman -R [paquete]```
+
+**Buscar paquetes:**
+- Familia debian: ```sudo apt search [paquete]``` 
+- Familia RHEL: ```sudo dnf search [paquete]``` 
+- Familia ArchLinux: ```sudo pacman -Ss [paquete] ```
+
+## 14. Comandos dpkg y rpm
+**Instalar paquetes:**
+- dpkg: ```sudo dpkg -i [paquete]``` 
+- rpm: ```sudo rpm -i [paquete] ```
+
+**Desinstalar un paquete:**
+- dpkg: ```sudo dpkg -r [paquete]``` 
+- rpm: ```sudo rpm -e [paquete]```
+
+**Obtener los paquetes instalados:**
+- dpkg: ```sudo dpkg -l``` 
+- rpm: ```sudo rpm -qa``` 
