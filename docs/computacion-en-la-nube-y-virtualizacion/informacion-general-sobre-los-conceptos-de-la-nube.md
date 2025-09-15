@@ -20,6 +20,6 @@ La infraestructura es como software, lo que permite flexibilidad, cambiar de for
 
 - **IaaS (Infraestructura como servicio):** Ofrece recursos de computación fundamentales, como servidores virtuales, almacenamiento y redes. El usuario tiene el máximo control y responsabilidad, instalando y gestionando su propio sistema operativo y aplicaciones. Por ejemplo **Google cloud compute engine o Amazon EC2**
 
-![ImagenDeEjemplo](/images/serviciosNube.png)
+![ImagenDeEjemplo](images/serviciosNube.png)
 
 
