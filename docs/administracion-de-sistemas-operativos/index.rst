@@ -8,6 +8,7 @@ Aquí encontrarás la documentación para la asignatura de Administración de si
    :caption: Temas
 
    proyecto
+   practicas
    aspectos-básicos-de-administracion
    instalación-y-configuración-de-Linux
 
