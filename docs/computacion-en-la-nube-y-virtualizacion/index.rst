@@ -9,7 +9,7 @@ Aquí encontrarás la documentación para la asignatura de Computacion en la nub
    :maxdepth: 2
    :caption: Temas
 
-   Aspectos-básicos-de-administracion
-   Instalación-y-configuración-de-Linux
+   informacion-general-sobre-los-conceptos-de-la-nube
+   
 
   
