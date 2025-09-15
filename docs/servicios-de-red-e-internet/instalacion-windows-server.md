@@ -93,4 +93,59 @@ Ahora escribimos el siguiente comando ``` net user administrador /active:yes``` 
 
 ![CMD_comando](images/Wserver/24.png)
 
+Ahora vamos a comprobar que se ha habilitado el usuario administrador de manera correcta, para ello abrimos el cuadro de ejecutar o bien buscandolo en la barra de busqueda o pulsando las teclas **Windows (Super) + R**
+
+![Abrir_ejecutar](images/Wserver/25.png)
+
+En el cuadro de ejecutar escribimos ```secpol.msg``` y pulsamos enter 
+
+![secpol.msg](images/Wserver/27.png)
+
+Se nos abrira el panel de directivas de seguridad local, aqui debemos buscar en Directivas locales > Opciones de seguridad > y dentro de opciones de seguridad buscamos **Cuentas: Estado de la cuenta de administrador**, debe poner habilitada
+
+![Administrador_habilitado](images/Wserver/29.png)
+
+## Instalacion de las Spice Tools (Guest Additinos de Libvirt)
+
+Al igual que en virtualbox o vmware que se instalan los extras en la maquina virtualizada para agregar soporte de graficos, o arrastrar y soltar entre otros en libvirt tambien se instalan estas aunque no es tan simple como en las dos primeras opciones que es pulsar un boton 
+En el caso de libvirt debemos irnos a la pagina de descarga de las [SpiceTools](https://www.spice-space.org/download.html)
+
+En la pagina hay descargas para diferentes sistemas operativos, para windows hay que buscar la opcion que diga **Windows Binaries** y pulsar el primer enlace
+
+![Spice_tools](images/Wserver/30.png)
+
+Al ser software codigo abierto no esta firmado (ya que esto cuesta dinero), por lo que nos saltara el siguiente aviso de Smart Screen, solo debemos pulsar en ejecutar
+
+![Smart_screen](images/Wserver/31.png)
+
+La instalacion comenzara 
+
+![Instalacion](images/Wserver/32.png)
+
+Aceptamos el acuerdo de licencia 
+
+![Instalacion2](images/Wserver/33.png)
+
+Y despues de un rato se finalizara la instalacion 
+
+![InstalacionFin](images/Wserver/35.png)
+
+
+## Configuracion Navegador Web 
+Como navegador yo he elegido Firefox ya que es el que uso a diario y el que menos recursos consume 
+
+![Firefox](images/Wserver/37.png)
+
+Para configurar la navegacion privada de manera predeterminada en firefox hay que hacer los siguientes pasos: 
+Abrimos el navegador y nos desplazamos al desplegable de la esquina superior derecha como se ve en la imagen, ahi pulsamos en ajustes
+
+![Firefox_ajustes](images/Wserver/39antes.png)
+
+Una vez en ajustes en el buscador superior buscamos **Historial**, la primera opcion que señala **Firefox podra:** pulsamos y se abrira un desplegable en el que seleccionaremos la ultima opcion **usar una configuracion privada para el historial**
+
+![historial](images/Wserver/40.png)
+
+Despues debemos marcar la casilla que dice **Navegacion privada permanente**, despues de estos todos los datos de la sesion de busqueda se borraran al salir 
+
+![historial2](images/Wserver/39.png)
 
