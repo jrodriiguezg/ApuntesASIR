@@ -137,7 +137,7 @@ Existen diferentes tipos según el alcance:
 ## 5. Analisis forense 
 A diferencia de la auditoria que se enfoca en la prevencion y mejora continua, el analisis forense se lleva acabo despues de un incidente de seguridad y busca evidencia digital de como ha sucedido el daño
 
-## 5.1 Fases del analisis forense:
+### 5.1 Fases del analisis forense:
 
 1. **Asegurameiento:** Proteger la "escena del crimen" para evitar alteraciones
 2. **Identificacion:** Localizas todas las posibles fuentes de evidencia, disco duros, memorias usb, etc. 
