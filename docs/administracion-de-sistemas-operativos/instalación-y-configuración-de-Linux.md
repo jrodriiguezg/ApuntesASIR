@@ -236,7 +236,7 @@ wget es una herramienta que permite descargar archivos de internet por medio de 
 - Familia RHEL: ```sudo dnf search [paquete]``` 
 - Familia ArchLinux: ```sudo pacman -Ss [paquete] ```
 
-## 14. Comandos dpkg y rpm
+## 15. Comandos dpkg y rpm
 **Instalar paquetes:**
 - dpkg: ```sudo dpkg -i [paquete]``` 
 - rpm: ```sudo rpm -i [paquete] ```
