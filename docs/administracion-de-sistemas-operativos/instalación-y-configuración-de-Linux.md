@@ -106,7 +106,7 @@ La siguiente imagen muestra fish con la personalización que tengo aplicada en m
 
 ![fish](images/fish.png)
 
-## 7. Dispositivos especiales 
+## 8. Dispositivos especiales 
 En linux existen una serie de dispositivos que se usan para la comunicacion entre programas estos son los flujos de informacion, y encontramos tres: 
 
 - **Entrada estandar (stdin):** Se representa con el numero **0** es el canal por el cual un programa recibe datos. Por lo general la entrada proviene del teclado del usuario pero tambien puede provenir de otro programa 
@@ -115,7 +115,7 @@ En linux existen una serie de dispositivos que se usan para la comunicacion entr
 
 Estos flujos son importantes para el uso de la línea de comandos, sobre todo al trabajar con ShellScript, ya que permiten redirigir la entrada y la salida de los programas.
 
-## 8. Tuberiasy redirecciones 
+## 9. Tuberiasy redirecciones 
 Permiten anidar comandos o pasar informacion de unos a otros.
 
 - **La tuberia ( | ):** Permite conectar la salida de un comandos a le entrada de otro, creando una cadena sucesiva de comandos, por ejemplos al hacer un cat a un fichero de texto podemos usar una tuberia para pasar la salida a un grep y filtrar 
@@ -130,58 +130,58 @@ Permiten anidar comandos o pasar informacion de unos a otros.
     - **2>>:** Añade el error a un archivo existente
     - **<&2:** Redirecciona la salida estandart para que se mezcle con un error estandart
 
-## 9. Comodines 
+## 10. Comodines 
 Los comodines son caracteres especiales que usa la shell para emparejar patrones en nombres de archivos, también permiten seleccionar varios archivos a la vez.
 
 - **Asterisco (*):** Coincide con cero o mas caracteres. Por ejemplo ``` rm *.txt ``` borrara todos los archivos que terminen en **.txt**
 - **Interrogacion (?):** Coincide con exactamente un solo caracter. Por ejemplos ``` ls archivo?.log ``` listara archivos como **archivo1.log** , **archivo2.log** 
 - **Corchetes ([]):** Coincide con cualquiera de los caracteres listados dentro de los corchetes. Por ejemplo ``` mv foto[1-3].jpg fotos ``` movera los archivos **foto1.jpg** , **foto2.jpg** , **foto3.jpg**  a la carpeta fotos 
 
-## 10. Comandos de manejo de ficheros 
+## 11. Comandos de manejo de ficheros 
 Estos son los comandos mas comunes en cuanto al manejo de ficheros en Linux 
 
-### 10.1 Navegacion y listado: 
+### 11.1 Navegacion y listado: 
 
 - **pwd:** Imprime el directorio de trabajo actual 
 - **cd:** Cambia el directorio 
 - **ls:** Lista el contenido de un directorio 
 
-### 10.2 Creacion y eliminacion: 
+### 11.2 Creacion y eliminacion: 
 
 - **mkdir:** Crea nuevos directorios 
 - **touch:** Crea un nuevo fichero vacio 
 - **rm:** Elimina ficheros y directorios
 - **ln:** Crea enlaces entre ficheros 
 
-### 10.3 Copia y movimiento:
+### 11.3 Copia y movimiento:
 
 - **cp:** Copia ficheros y directorios 
 - **mv:** Mueve ficheros y directorios 
 
-### 10.4 Visualizacion y manipulacion:
+### 11.4 Visualizacion y manipulacion:
 
 - **cat:** Muestra el contenido de un fichero por pantalla 
 - **more y less:** Muestra el contenido de un fichero por paginas 
 - **head:** Muestra las primeras lineas de un fichero (10)
 - **tail:** Muestra las ultimas lineas de un fichero (10)
 
-### 10.5 Permisos y propiedad:
+### 11.5 Permisos y propiedad:
 
 - **chmod:** Cambia los permisos de un fichero
 - **chown:** Cambia el propietario de un fichero o directorio 
 - **chgrp:** Cambia el grupo de un fichero o directorio 
 
-### 10.6 Busqueda de ficheros y texto: 
+### 11.6 Busqueda de ficheros y texto: 
 
 - **find:** Busca ficheros y directorios en una jerarquia de archivos 
 - **grep:** Busca patrones de texto dentro de ficheros 
 
-### 10.7 Compresion y verificacion: 
+### 11.7 Compresion y verificacion: 
 
 - **zip y bzip2:** Comprimen y descomprimen ficheros 
 - **md5sum:** Calcula y verifica la suma de verificacion MD5
 
-### 10.8 Filtros:
+### 11.8 Filtros:
 
 - **sort:** Ordena las linas de un archivo de texto o la salida de otro comando, por defecto por orden alfabetico 
 - **cut:** Recorta secciones de cada linea de archivos 
@@ -189,27 +189,27 @@ Estos son los comandos mas comunes en cuanto al manejo de ficheros en Linux
 - **wc:** Cuenta el numero de lineas, palabras y caracteres de un archivo o salida de un comando 
 - **tee:** Lee la entrada estándar y la escribe tanto en la salida estándar (pantalla) como en uno o más archivos. Es como una "T" en una tubería, dividiendo el flujo
 
-## 11. Gestión de paquetes 
+## 12. Gestión de paquetes 
 La forma más fácil y común de instalar software en Linux, a diferencia de Windows, es por medio de un gestor de paquetes. Según la familia de la distribución que usemos, encontramos varios gestores de paquetes.
 
 - **Distribuciones derivadas de debian (.deb):** Usan el gestor de paquetes apt (aptitude) y como gestor de bajo nivel se usa dpkg 
 - **Distribuciones derivadas de RedHat (.rpm):** Usan el gestor de paquetes dnf actualmente en su versión 5 (yum ya está en desuso y usarlo solo lleva a un enlace simbólico a dnf), el gestor de bajo nivel es rpm. 
 - **Distribuciones derivadas de ArchLinux (tar.gz):** Usan el gestor de paquetes pacman y pacman para el repositorio de la comunidad (AUR), como tal no tiene paquetes si no que coge el código fuente y lo compila en ese momento. 
 
-### 11.1 Gestores de paquetes universales 
+### 12.1 Gestores de paquetes universales 
 Los anteriores eran gestores de paquetes especificos de cada distribucion, pero luego encontramos unos gestores de paquetes que funcionan en todas las distribuciones independientemente la familia de la que vengan (normalmente estos paquetes se ejecutan en modo sandbox).
 
 - **Snap:** Desarollado por canonical, permite empaquetar los programas y que sean usados en cualquier distribucion, su uso es ``` snap install [paquete] ```
 - **Flatpak:** Al igual que snap pero mas extendido y con un catalogo de programas mayor, esta financiado por redhat, su uso es ``` flatpak install [paquete] ``` 
 - **Appimage:** Este mas que un gestor de paquetes es una extension universal que se ejecuta en todas las distribuciones linux, permite crear apps portables 
 
-## 12. WGET 
+## 13. WGET 
 
 wget es una herramienta que permite descargar archivos de internet por medio de la terminal y en segundo plano, se usa ampliamente para descargar scripts o instaladores, también permite descargas recursivas. 
 
-## 13. Gestión de paquetes 
+## 14. Gestión de paquetes 
 
-### 13.1 Instalacion de paquetes:
+### 14.1 Instalacion de paquetes:
 
 **Instalacion de paquetes:**
 - Familia debian: ```sudo apt install [paquete]``` 
