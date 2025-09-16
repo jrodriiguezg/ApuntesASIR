@@ -90,6 +90,66 @@ Algunas de las normas y estandares sobre la seguridad de la informacion, son:
 - **ISO 27005:** Esta norma se centra específicamente en la gestión de riesgos. Proporciona directrices sobre cómo identificar, analizar, evaluar, tratar y monitorizar los riesgos relacionados con la seguridad de la información
 
 ## 3. Amenazas 
+Una amenaza es un evento externo, intecionado o no que puede aprovechar una vulnerbilidad para causar un daño a un sistema. A diferencia de una vulnerabilidad, que es una debilidad interna del sistema, una amenaza es la acción que explota esa debilidad.
+**Riesgo:** Surge cuando hay una vulnerabilidad y una amenaza que pueda explotarla 
+**Impacto:** Es el daño que sufre un sistema cuando un riesgo se materializa en un evento real 
+
+### 3.1 Tipos de amenzas segun el factor de seguridad 
+- **Interceptacion:** Ocurre cuando un intruso no autorizado accede a la informacion, en este caso la **confidencialidad** se ve comprometida.
+- **Modificacion:** Sucede cuando un intruso altera los datos o recursos del sistema, esto compromete la **integridad** y la **confidencialidad**.
+- **Interrupcion:** Conlleva que un recurso del sistema se vuelva inutilizable o no este disponible, compromete la **disponibilidad**.
+- **Fabricacion:** Un intruso inserta un objeto falsificado en un sistema, compromete la **autenticidad** y la **integridad**.
+
+### 3.2 Clasificacion general de amenazas
+- **Amenzas fisicas:** Afectan al hardware y las instalaciones, como robos, desastres naturales, cortes de energia, etc. 
+- **Amenazas logicas:** Afectan al software y los datos, se manifiestan a traves de malware.
+
+### 3.3 Ejemplos de malware 
+
+- **Virus**: Código que se adjunta a un archivo ejecutable y se replica.
+- **Gusano (Worm)**: Se auto-duplica y se propaga por la red, consumiendo recursos y, en ocasiones, causando daños.
+- **Caballo de Troya (Trojan)**: Un software que parece útil pero que esconde funciones maliciosas, como dar acceso remoto al atacante.
+- **Exploit**: Un programa diseñado para aprovechar una vulnerabilidad específica en otro software.
+- **Bomba Lógica**: Código malicioso que se activa bajo ciertas condiciones, como una fecha u hora específicas.
+- **Puerta Trasera (Backdoor)**: Un método oculto para saltarse la autenticación de un sistema.
+- **Programa Espía (Spyware)**: Recopila información del usuario sin su consentimiento.
+- **Grabador de teclado (Keylogger)**: Registra las pulsaciones de teclado para robar datos como contraseñas.
+- **Rootkit**: Un conjunto de herramientas que permite a un atacante obtener control total sobre un sistema y ocultar su presencia.
+
+
+## 4. Auditoria de seguridad de sistemas de informacion 
+Una auditoria es un examen y analisis de un sistema informatico para identificar vulnerabilidades, el objetivo es encontrar y corregir debilidades antes de un ataque real. 
+
+**Objetivos clase de una auditoria:**
+- **Evaluar la seguridad:** Determinar el estado de la proteccion, los controles y medidas de seguridad de los activos 
+- **Verificar el cumplimiento:** Asegurar que los sistemas cumplen las normativas
+- **Generar un informe:** Proporcionar informes detallados con los hallazgos y recomendaciones 
+
+### 4.1 Fases y tipos de auditoria 
+Las auditorias siguen un proceso que incluye la enumeración de sistemas, la detección de vulnerabilidades, y la recomendación de medidas correctivas y preventivas. 
+Existen diferentes tipos según el alcance:
+
+- **Auditoria interna:** Revisa la seguridad dentro de la red local 
+- **Auditoria perimetral:** Analiza la seguridad de la conexion local de la red interna en redes publicas 
+- **Test de intrusion:** Simula un ataque para ver como resiste el sistema 
+- **Auditoria de codigo de aplicaciones:** Analizael codigo fuente de una aplicacion para encontrar fallos de seguridad
+
+## 5. Analisis forense 
+A diferencia de la auditoria que se enfoca en la prevencion y mejora continua, el analisis forense se lleva acabo despues de un incidente de seguridad y busca evidencia digital de como ha sucedido el daño
+
+## 5.1 Fases del analisis forense:
+
+1. **Asegurameiento:** Proteger la "escena del crimen" para evitar alteraciones
+2. **Identificacion:** Localizas todas las posibles fuentes de evidencia, disco duros, memorias usb, etc. 
+3. **Recogida:** Se recopilan los dispositivos de manera segura documentando cada paso
+4. **Obtencion y preservacion:** Se clona la evidencia digital para trabajar sobre ella, se usa **HASH** para verificar que el clon es identico al original
+5. **Analisis:** Estudiar la evidencia, usando herramientas especializadas 
+6. **Presentacion del informe:** Se crea un informe detallado de lo ocurrido, escrito de forma clara para personas sin conocimientos tecnicos 
+
+
+
+
+
 
 
 
