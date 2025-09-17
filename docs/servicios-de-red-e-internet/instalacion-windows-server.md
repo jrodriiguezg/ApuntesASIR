@@ -230,7 +230,7 @@ Les he cambiado el nombre, por que ahun que yo las indentifico asi se ve mas fac
 
 ![Redes](images/Wserver/53.png)
 
-Desde una **CMD** podemos ver los ajustes de red y la configuracion haciendo **ipconfig /all**
+Desde una **CMD** podemos ver los ajustes de red y la configuracion haciendo ```ipconfig /all```
 
 ![ipconfig](images/Wserver/54.png)
 
