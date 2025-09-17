@@ -201,14 +201,14 @@ Desde una terminal o con el editor de texto, creamos un archivo con el nombre qu
 
 Despues, ponemos los siguientes comandos para levantar la red privada 
 
-```sudo virh net-define [fichero.xml]``` Este comando levanta la red
-```sudo virsh net-start [nombre_red]``` Este comando inicia la red 
-```sudo virsh net-autostart [nombre_red]``` Este comando inicia la red en el inicio del sistema 
+- ```sudo virh net-define [fichero.xml]``` Este comando levanta la red
+- ```sudo virsh net-start [nombre_red]``` Este comando inicia la red 
+- ```sudo virsh net-autostart [nombre_red]``` Este comando inicia la red en el inicio del sistema 
 
 Si qusieramos eliminar una red 
 
-```sudo virsh net-undefine [nombre_red]``` Para desactivarla 
-```sudo virsh net-destroy [nombre_red] ``` Para borrarla 
+- ```sudo virsh net-undefine [nombre_red]``` Para desactivarla 
+- ```sudo virsh net-destroy [nombre_red] ``` Para borrarla 
 
 ![Inicio_red](images/Wserver/50.png)
 
