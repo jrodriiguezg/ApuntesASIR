@@ -61,11 +61,11 @@ Para mantener la seguridad del sistema informatico se necesitan establecer unas 
 
 En cuanto a los mecanismos de seguridad, se dividen en tres grupos: 
 1. **Prevencion:** 
-    - Evitan desviaciones respecto a las politicas de seguridad 
+    - Evitan desviaciones respecto a las politicas de seguridad, Ejemplo: Cortafuegos, IDS, IPS 
 2. **Deteccion:**
-    - Detectan las desviaciones, violaciones o intentos de violacion del sistema de seguridad 
+    - Detectan las desviaciones, violaciones o intentos de violacion del sistema de seguridad, Ejemplo: Antivirus 
 3. **Recuperacion:**
-    - Se aplicacion cuando se ha detectado una violacion de la seguridad del sistema para recuperar su funcionamiento normal 
+    - Se aplicacion cuando se ha detectado una violacion de la seguridad del sistema para recuperar su funcionamiento normal, Ejemplo: Copias de seguridad, puntos de restauracion 
 
 ### 2.3 Elementos vulnerables y vulnerabilidades 
 Los elementos mas vulnerables de un sistema operativo, son: 
