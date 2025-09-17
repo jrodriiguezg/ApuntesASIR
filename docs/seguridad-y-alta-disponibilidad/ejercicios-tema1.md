@@ -14,13 +14,13 @@
 ## 2.4 Indicar mecanismos de seguridad para conseguir: 
 
 **La confidencialidad:**
-    - Controles de acceso
-    - Autenticacion y autorizacion
+- Controles de acceso
+- Autenticacion y autorizacion
 
 **La integridad:**
-    - Firmas digitales 
-    - Funciones HASH 
-    
+- Firmas digitales 
+- Funciones HASH 
+
 **La disponibilidad:**
-    - Redundancia 
-    - Balanceo de carga 
+- Redundancia 
+- Balanceo de carga 
