@@ -16,9 +16,11 @@
 **La confidencialidad:**
     - Controles de acceso
     - Autenticacion y autorizacion
+
 **La integridad:**
     - Firmas digitales 
     - Funciones HASH 
+    
 **La disponibilidad:**
     - Redundancia 
     - Balanceo de carga 
