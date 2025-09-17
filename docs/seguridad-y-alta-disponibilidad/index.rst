@@ -10,4 +10,6 @@ Aquí encontrarás la documentación para la asignatura de Seguridad y alta disp
    :caption: Temas
 
 
-   seguridad-informatica
+   seguridad-informatica 
+   ejercicios-tema1
+   
