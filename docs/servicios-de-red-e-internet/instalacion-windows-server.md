@@ -149,5 +149,89 @@ Después debemos marcar la casilla que dice **Usar siempre el modo de navegació
 
 ![historial2](images/Wserver/39.png)
 
-## Configuracion contraseñas
+## Configuracion contraseñas y nombre del equipo 
+
+Ahora vamos a desabilitar las contraseñas seguras y el tiempo que tardan en expirar en el sistema 
+
+Para cambiar estos ajustes nos vamos al Panel de administracion del servidor > Herramientas > Directivas de Seguridad Local
+![directivasseguridad](images/Wserver/4142.png)
+
+Una vez dentro de **Directivas de seguridad local**, nos desplazamos a Directiva de cuenta > Directiva de contraseña y pulsamos en **La contraseña debe cumplir los requisitos de complejidad**
+
+![directivasseguridad_ventana](images/Wserver/41.png)
+
+Y ahora pulsamos en deshabilitado, despues en aplicar o aceptar. 
+
+![Deshabilitar](images/Wserver/42.png)
+
+Ahora cambiaremos la vigencia maxima de la contraseña de 45 dias a 300 
+
+![300](images/Wserver/43.png)
+
+Al final debe quedar asi
+
+![Final](images/Wserver/44.png)
+
+Ahora vamos a cambiar el periodo de actualizacion del servidor de 10 minutos a 1 minuto, para ello pulsamos en Administrar > Propiedades del administrador del servidor y en la primera opcion cambiamos el tiempo de 10 a 1  
+Despues pulsamos **Agregar**
+
+![Final](images/Wserver/45.png)
+
+Ahora cambiaremos el nombre del equipo, para ello nos desplazamos a Administrador de archivos > Este equipo > Click derecho, propiedades > y bajamos hasta ver la opcion de **Cambiar nombre del equipo**
+
+![NombreEquipo](images/Wserver/46.png)
+
+Al pulsar en **Cambiar nombre de equipo** se nos abre la siguiente ventana en la que introduciremos **SERVIDORW25XX**, despues pulsamos siguiente y **reiniciar mas tarde**
+
+![NombreEquipo](images/Wserver/47.png)
+![Reinicio](images/Wserver/48.png)
+
+## Creacion de Redes Privadas (LAN) en Libvirt (QEMU)
+Para crear una red privada en QEMU debemos primero crear la red mediante un fichero **.xml**, despues con ese fichero levantar la red y activarla, y una vez todo esto ya nos aparecera en LibVirt
+
+Desde una terminal o con el editor de texto, creamos un archivo con el nombre que sea pero terminacion **.xml** y ponemos el siguiente contenido 
+
+```
+<network> 
+    <name>nombre_de_la_red</name>
+</network> 
+```
+
+![red_windows.xml](images/Wserver/49.png)
+
+Despues, ponemos los siguientes comandos para levantar la red privada 
+
+```sudo virh net-define [fichero.xml]``` Este comando levanta la red
+```sudo virsh net-start [nombre_red]``` Este comando inicia la red 
+```sudo virsh net-autostart [nombre_red]``` Este comando inicia la red en el inicio del sistema 
+
+Si qusieramos eliminar una red 
+
+```sudo virsh net-undefine [nombre_red]``` Para desactivarla 
+```sudo virsh net-destroy [nombre_red] ``` Para borrarla 
+
+![Inicio_red](images/Wserver/50.png)
+
+Para agregar hardware, pulsamos la bombilla al lado del icono del monitor, despues pulsamos en **Añadir hardware**
+
+![Inicio_red](images/Wserver/55.png)
+
+Despues seleccionamos el tipo de hardware, en este caso red, y vemos que nos sale **Red Virtual "red-windows"**, seleccionamos y pulsamos finalizar 
+
+![Inicio_red](images/Wserver/51.png)
+
+Ahora en la maquina windows server, con la LAN conectada, nos vamos al **Centro de redes y recursos compartidos** seleccionamos nuestro adaptador de red asignado a LAN, pulsamos en click derecho > Propiedades, despues **Pulsamos protocolo de internet version 4**.
+Y establecemos la direccion IP de manera manual en este caso sera la **192.168.10.1**
+Al acabar pulsamos Aceptar 
+
+![Configurar_IP](images/Wserver/52.png)
+
+Les he cambiado el nombre, por que ahun que yo las indentifico asi se ve mas facil 
+
+![Redes](images/Wserver/53.png)
+
+Desde una **CMD** podemos ver los ajustes de red y la configuracion haciendo **ipconfig /all**
+
+![ipconfig](images/Wserver/54.png)
+
 
