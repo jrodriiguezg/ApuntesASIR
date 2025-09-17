@@ -148,3 +148,6 @@ Una vez en Ajustes, en el buscador superior buscamos **Historial**. En la primer
 Después debemos marcar la casilla que dice **Usar siempre el modo de navegación privada**. Después de esto, todos los datos de la sesión de búsqueda se borrarán al salir.
 
 ![historial2](images/Wserver/39.png)
+
+## Configuracion contraseñas
+
