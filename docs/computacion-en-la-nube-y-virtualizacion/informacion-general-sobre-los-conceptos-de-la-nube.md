@@ -43,6 +43,8 @@ La infraestructura es como software, lo que permite flexibilidad, cambiar de for
 
 **Servicio Web:** Es cualquier software que se pone a disposicion a travez de internet y utiliza un formato estandarizado para la solicitud y despuesta de una interaccion con la API
 
+![Servicio_WEB](images/servicioWEB.png)
+
 Es una plataforma segura en la nube con una amplia gama de productos globales que trabajan en conjunto. Ofrece acceso bajo demanda a recursos informáticos, de almacenamiento, de red y de base de datos
 
 **Servicios:** AWS ofrece muchas categorías de servicios, como análisis, redes, bases de datos y seguridad. La elección de un servicio depende de los objetivos empresariales y los requisitos tecnológicos.
