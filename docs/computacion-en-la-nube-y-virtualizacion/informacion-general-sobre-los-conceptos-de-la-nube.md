@@ -12,7 +12,7 @@ La informatica en la nube, permite ver la infrastructura como software en vez de
 ### 1.2. Modelo de informatica en la nube
 La infraestructura es como software, lo que permite flexibilidad, cambiar de forma facil rapida y sencilla de hardware 
 
-## 2. Modelos de servicio en la nube
+### 1.3. Modelos de servicio en la nube
 
 - **SaaS (Software como servicio):** El provedor en la nube gestiona y mantiene toda la infraestructura y el software. El usuario final solo accede a la aplicacion a travez de una app o navegador. Por ejemplo **Google Drive**
 
@@ -22,7 +22,7 @@ La infraestructura es como software, lo que permite flexibilidad, cambiar de for
 
 ![ImagenDeEjemplo](images/serviciosNube.png)
 
-## 3. Modelos de implememtacion de la informatica en la nube 
+### 1.4. Modelos de implememtacion de la informatica en la nube 
 
 - **Modelo Nube (Publica):** En este modelo, todos los recursos de computación, como servidores, almacenamiento y bases de datos, son propiedad de un proveedor de servicios externo y se gestionan por este
 
@@ -31,7 +31,7 @@ La infraestructura es como software, lo que permite flexibilidad, cambiar de for
 - **Local (Nube Privada):** En este modelo, todos los recursos de computación se encuentran en el centro de datos de la propia organización. La empresa es la única responsable de comprar, gestionar y mantener todo el hardware y el software. Este enfoque ofrece el máximo control y seguridad. 
 
 
-## 4. Ventajas de la informatica en la nube
+## 2. Ventajas de la informatica en la nube
 
 - **Gastos variables:** Permite pagar solo por lo que se consume 
 - **Elimina estimaciones sobre capacidad:** Se ajusta la capacidad de manera automatica segun la demanda
@@ -39,7 +39,7 @@ La infraestructura es como software, lo que permite flexibilidad, cambiar de for
 - **Menos tareas administrativas:** Se reduce el gasto de gestion y mantenimiento 
 - **Escala mundial:** Permite tener alcanze global
 
-## 5. Introduccion a Amazon Web Services (AWS): 
+## 3. Introduccion a Amazon Web Services (AWS): 
 
 **Servicio Web:** Es cualquier software que se pone a disposicion a travez de internet y utiliza un formato estandarizado para la solicitud y despuesta de una interaccion con la API
 
