@@ -7,11 +7,17 @@ Aquí encontrarás la documentación para la asignatura de Administración de si
    :maxdepth: 2
    :caption: Temas
 
-   proyecto
-   practicas
+
    aspectos-básicos-de-administracion
    instalación-y-configuración-de-Linux
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Trabajos 
+
+
+   proyecto
+   practicas
 
 
   

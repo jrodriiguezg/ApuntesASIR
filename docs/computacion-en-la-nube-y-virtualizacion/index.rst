@@ -12,4 +12,6 @@ Aquí encontrarás la documentación para la asignatura de Computacion en la nub
    informacion-general-sobre-los-conceptos-de-la-nube
    
 
-  
+.. toctree::
+   :maxdepth: 2
+   :caption: Trabajos 

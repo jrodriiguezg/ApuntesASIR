@@ -11,5 +11,10 @@ Aquí encontrarás la documentación para la asignatura de Seguridad y alta disp
 
 
    seguridad-informatica 
-   ejercicios-tema1
    
+.. toctree::
+   :maxdepth: 2
+   :caption: Trabajos 
+
+
+   ejercicios-tema1
