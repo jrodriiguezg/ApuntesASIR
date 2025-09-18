@@ -22,4 +22,30 @@ La infraestructura es como software, lo que permite flexibilidad, cambiar de for
 
 ![ImagenDeEjemplo](images/serviciosNube.png)
 
+## 5. Modelos de implememtacion de la informatica en la nube 
+
+- **Modelo Nube (Publica):** En este modelo, todos los recursos de computación, como servidores, almacenamiento y bases de datos, son propiedad de un proveedor de servicios externo y se gestionan por este
+
+- **Hibrido:** Este es un modelo que combina la nube pública con la infraestructura local (nube privada). Las aplicaciones y los datos pueden moverse entre ambas, lo que permite a las empresas usar la nube pública para cargas de trabajo menos críticas o picos de demanda, mientras mantienen los datos sensibles o aplicaciones críticas en su propia infraestructura.
+
+- **Local (Nube Privada):** En este modelo, todos los recursos de computación se encuentran en el centro de datos de la propia organización. La empresa es la única responsable de comprar, gestionar y mantener todo el hardware y el software. Este enfoque ofrece el máximo control y seguridad. 
+
+
+## 6. Ventajas de la informatica en la nube
+
+- **Gastos variables:** Permite pagar solo por lo que se consume 
+- **Elimina estimaciones sobre capacidad:** Se ajusta la capacidad de manera automatica segun la demanda
+- **Velocidad y agilidad:** Los recursos estan disponibles en minutos 
+- **Menos tareas administrativas:** Se reduce el gasto de gestion y mantenimiento 
+- **Escala mundial:** Permite tener alcanze global
+
+## 7. Introduccion a Amazon Web Services (AWS): 
+
+**Servicio Web:** Es cualquier software que se pone a disposicion a travez de internet y utiliza un formato estandarizado para la solicitud y despuesta de una interaccion con la API
+
+Es una plataforma segura en la nube con una amplia gama de productos globales que trabajan en conjunto. Ofrece acceso bajo demanda a recursos informáticos, de almacenamiento, de red y de base de datos
+
+**Servicios:** AWS ofrece muchas categorías de servicios, como análisis, redes, bases de datos y seguridad. La elección de un servicio depende de los objetivos empresariales y los requisitos tecnológicos.
+
+**Formas de interactuar con AWS:** Los usuarios pueden interactuar con AWS de tres maneras principales: a través de la Consola de administración de AWS (interfaz gráfica), la Interfaz de línea de comandos (AWS CLI) (comandos o scripts) o los Kits de desarrollo de software (SDK) para programar directamente desde el código
 
