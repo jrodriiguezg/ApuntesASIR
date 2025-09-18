@@ -13,3 +13,6 @@ __pycache__/
 *.log
 *.db
 
+
+# Otros
+docs/computacion-en-la-nube-y-virtualizacion/images/AWS_LOGO.png
