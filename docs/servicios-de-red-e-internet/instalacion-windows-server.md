@@ -289,4 +289,7 @@ Se nos abrira la siguiente ventana, establecemos el nombre el tipo de instantane
 
 
 # Instalacion Windows 10
+En clase se ha visto como hacer lo que se conoce como instalacion desatendida una opcion que esta en VirtualBox o Vmware pero en Libvirt no existe, por lo que yo he documentado una instalacion normal de Windows 10 
+
+
 
