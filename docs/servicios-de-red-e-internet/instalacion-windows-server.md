@@ -397,6 +397,9 @@ Desde las directivas de seguridad local, podemos ver que la cuenta de administra
 
 ![Paso28](images/w10/28.png)
 
+## Instalacion de la red Virtual 
+Como ya esta creada de la instalacion de Windows Server no es neecsario crearla de nuevo, los pasos son los mismos que anteriormente, añadimos un nuevo dispositivo hardware > elegimos tarjeta de red y en el tipo de red elegimos **red virtual windows**
+
 
 
 

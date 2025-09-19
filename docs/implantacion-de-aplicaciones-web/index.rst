@@ -11,6 +11,7 @@ Aquí encontrarás la documentación para la asignatura de Implantacion de aplic
 
    chuletario-php
    instalacion-de-servidores-de-aplicaciones-web
+   php
    
 .. toctree::
    :maxdepth: 2
