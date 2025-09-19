@@ -1,4 +1,4 @@
-# Instalación Windows Server 2022 y Windows 10
+# Instalación Windows Server 2022 
 Yo voy a usar Libvirt en vez de VMware, ya que en Fedora Silverblue, que es lo que uso, no se puede instalar otra cosa. Debido a que es un sistema inmutable y las opciones de virtualizacion solo son o QEMU/KVM o podman/docker 
 
 Esta primera captura muestra la pantalla inicial de Libvirt (que es una interfaz gráfica para QEMU/KVM). En la esquina superior izquierda está el botón para crear una máquina virtual.
@@ -291,7 +291,7 @@ Se nos abrira la siguiente ventana, establecemos el nombre el tipo de instantane
 # Instalacion Windows 10
 En clase se ha visto como hacer lo que se conoce como instalacion desatendida una opcion que esta en VirtualBox o Vmware pero en Libvirt no existe, por lo que yo he documentado una instalacion normal de Windows 10 
 
-Seleccionamos medio de instalacion local y pulsamos siguiente
+Seleccionamos medio de instalacion local y pulsamos adelante
 
 ![Paso1](images/w10/1.png)
 
@@ -307,6 +307,30 @@ Despues pulsamos en explorar localmente y buscamos nuestra imagen .iso
 Despues pulsamos siguiente 
 
 ![Paso5](images/w10/5.png)
+
+Ahora establecemos la cantidad de RAM y el numero de CPUs a usar, lo he dejado por defecto y pulsamos adelante
+
+![Paso6](images/w10/6.png)
+
+Ahora definimos el tamaño del disco duro, por defecto lo da en 20Gb lo he subido a 60Gb 
+
+![Paso7](images/w10/7.png)
+
+En este ultimo paso definiremos el nombre de la maquina virtual , y podremos ver un resumen simplificado de nuestra maquina virtual, pulsamos en finalizar
+
+![Paso8](images/w10/8.png)
+
+Ahora comenzara la instalacion de Windows 10 (he saltado pasos por que es muy parecida a windows server, como las preguntas de recoleccion de datos, que he pulsado **No** en todo)
+
+![Paso9](images/w10/9.png)
+
+Pulsamos **Instalar ahora** para instalar Windows 10 
+
+![Paso10](images/w10/10.png)
+
+En el siguiente paso nos pedira clave del producto, no tengo clave entonces pulso en **No tengo clave de producto**
+
+![Paso11](images/w10/11.png)
 
 
 
