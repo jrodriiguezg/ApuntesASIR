@@ -373,6 +373,7 @@ Despues de un rato se instalara
 ![Paso21](images/w10/22.png)
 
 ## Activacion de Windows 
+Y
 
 
 
