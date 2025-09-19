@@ -372,7 +372,34 @@ Despues de un rato se instalara
 
 ![Paso21](images/w10/22.png)
 
-## Activacion de Windows 
+## Activacion de Windows y cuenta de administrador 
+Ahora vamos a activar windows mediante el CMD, para ello nos vamos al buscador de programas de windows, escribimos CMD y pulsamos clic derecho **Ejecutar como administrador**
+
+![Paso23](images/w10/23.png)
+
+Introducimos el siguiente comando ```SLMGR /IPK 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y``` y pulsamos enter y luego **Aceptar**
+
+![Paso24](images/w10/24.png)
+
+Ahora ponemos el siguiente comando ```SLMGR /SKMS KMS.DIGIBOY.IR ``` pulsamos enter y aceptar 
+
+![Paso25](images/w10/25.png)
+
+Para finalizar ponemos el siguiente comando ```SLMGR /ATO ``` pulsamos enter y aceptar 
+
+![Paso26](images/w10/26.png)
+
+Ahora activaremos la cuenta de Administrador, para ello escribimos ```NET USER ADMINISTRADOR /ACTIVE:YES ``` 
+
+![Paso27](images/w10/27.png)
+
+Desde las directivas de seguridad local, podemos ver que la cuenta de administrador esta activada: 
+
+![Paso28](images/w10/28.png)
+
+
+
+
 
 
 

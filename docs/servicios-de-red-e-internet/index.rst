@@ -7,7 +7,11 @@ Aquí encontrarás la documentación para la asignatura de Servicios de red e in
 
 .. toctree::
    :maxdepth: 2
-   :caption: Temas
+   :caption: Trabajos y prácticas
 
    proyecto
    instalacion-windows-server
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Temas
