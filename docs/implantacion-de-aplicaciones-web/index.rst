@@ -9,7 +9,7 @@ Aquí encontrarás la documentación para la asignatura de Implantacion de aplic
    :maxdepth: 2
    :caption: Temas
 
-
+   chuletario-php
    instalacion-de-servidores-de-aplicaciones-web
    
 .. toctree::
