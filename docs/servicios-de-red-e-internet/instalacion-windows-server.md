@@ -273,5 +273,19 @@ Y establecemos la contraseña
 
 Despues reiniciamos 
 
+## Creacion de una snapshoot 
+
+Ahora vamos a crear la snapshoot de la maquina cero, con lo basico ya creado, como forma de copia de seguridad por si algo sale mal, para ello en libvirt pulsamos vista > Instantaneas 
+
+![Instantanea](images/Wserver/64.png)
+
+Abrimos el gestor de instantaneas y pulsamos en el **+** de la parte inferior 
+
+![Crear](images/Wserver/65.png)
+
+Se nos abrira la siguiente ventana, establecemos el nombre el tipo de instantanea y la descripcion 
+
+![Crear2](images/Wserver/66.png)
+
 
 
