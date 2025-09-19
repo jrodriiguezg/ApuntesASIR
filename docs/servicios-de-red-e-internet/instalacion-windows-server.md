@@ -244,7 +244,34 @@ Al finalizar el proceso, nos preguntara si queremos reinciar, ponemos una **Y** 
 
 ![Reiniciar](images/Wserver/57.png)
 
+## Configuracion de la contraseña en el usuario Administrador 
 
+Para ello abrimos el Panel de control 
+
+![Panel_control](images/Wserver/58.png)
+
+Nos desplazamos a cuentas de usuario 
+
+![Cuentas_de_usuario](images/Wserver/59.png)
+
+Y ahi pulsamos en administrar otra cuenta
+
+![Administrar_otra_cuenta](images/Wserver/60.png)
+
+Una vez dentro hacemos doble clic en el usuario **Administrador**
+
+![Usuario_administrador](images/Wserver/61.png)
+
+Y pulsamos en cambiar la contraseña 
+
+![Cambiar_Contraseña](images/Wserver/62.png)
+
+
+Y establecemos la contraseña 
+
+![Nueva_contraseña](images/Wserver/63.png)
+
+Despues reiniciamos 
 
 
 
