@@ -3,7 +3,7 @@
 Asignaturas
 ===========
 
-Aquí se encuentran todas las asignaturas. Haz clic en una para ver sus temas.
+Aquí se encuentran todas las asignaturas. Y sus temas
 
 .. toctree::
    :maxdepth: 2
