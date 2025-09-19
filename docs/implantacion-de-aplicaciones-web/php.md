@@ -1,4 +1,4 @@
-# Tema 2 PHP
+# Tema 2: PHP
 PHP es el acronimo de **Hypertext Preprocesor**, ejecuta codigo en el servidor y devuelve un HTML al cliente, es compatible con bases de datos, el código PHP puede ser interpretado y ejecutado desde la interfaz de línea de comandos (CLI) o desde un servidor web que tenga implementado un intérprete PHP, php trabaja con **frameworks** que son una estructura predefinida de herramientas, librerías y convenciones que proporciona una base para desarrollar aplicaciones de software, sitios web o proyectos de marketing de forma más rápida y organizada, algunos frameworks para PHP son: Laravel, Slim. Aparte de PHO tenemos otros lenguajes como pueden ser **Python**, **Ruby** o **Node.js**
 
 ![Funcionamiento_PHP](images/php_funcionamiento.png)
