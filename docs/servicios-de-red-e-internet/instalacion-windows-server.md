@@ -295,7 +295,18 @@ Seleccionamos medio de instalacion local y pulsamos siguiente
 
 ![Paso1](images/w10/1.png)
 
-Seleccionamos el archivo ISO
+Seleccionamos el archivo ISO, para ello pulsamos en Explorar 
 
 ![Paso2](images/w10/2.png)
+
+Despues pulsamos en explorar localmente y buscamos nuestra imagen .iso 
+
+![Paso3](images/w10/3.png)
+![Paso4](images/w10/4.png)
+
+Despues pulsamos siguiente 
+
+![Paso5](images/w10/5.png)
+
+
 
