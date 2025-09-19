@@ -235,7 +235,7 @@ Desde una **CMD** podemos ver los ajustes de red y la configuracion haciendo ```
 ![ipconfig](images/Wserver/54.png)
 
 ## Activacion
-Desde un **CMD** y con la red NAT desactivada, introducimos el siguiente comando para activar el windows Server y quitar la marca de agua de la esquina 
+Desde un **CMD** y con la red NAT desactivada (sin acceso a internet), introducimos el siguiente comando para activar el windows Server y quitar la marca de agua de la esquina 
 ´´´ dism /online /set-edition:serverStandard /productkey:VDYBN-27WPP-V4HQT-9VMD4-VMK7H /accepteula ``` 
 
 ![Activar](images/Wserver/56.png)
@@ -243,6 +243,7 @@ Desde un **CMD** y con la red NAT desactivada, introducimos el siguiente comando
 Al finalizar el proceso, nos preguntara si queremos reinciar, ponemos una **Y** para reiniciar 
 
 ![Reiniciar](images/Wserver/57.png)
+
 
 
 
