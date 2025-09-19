@@ -12,7 +12,7 @@ La sintaxis de PHP es bastante simple y se parece a otros lenguajes como C o Per
 - Variables: Las variables se declaran usando el símbolo del dólar ($) seguido del nombre de la variable (ej. $mensaje).
 - Comentarios: Puedes usar // o # para comentarios de una sola línea, y /* ... */ para comentarios multilínea.
 
-El codigo PHP puede integrarse directamente en el HTML. 
+El codigo PHP puede integrarse directamente en el HTML
 
 ## Variables 
 Se representan con el simbolo **$** seguido por el nombre de la variable 
