@@ -4,7 +4,7 @@
 directorio dir11. Dentro del directorio dir3 crear el directorio dir31. Dentro del directorio
 dir31, crear los directorios dir311 y dir312.
 
-```mkdir prueba/dir1 prueba/dir2 prueba/dir3 prueba/dir1/dir11 prueba/dir3/dir31 prueba/dir3/dir31/dir311 prueba/dir3/dir31/dir312``
+```mkdir prueba && mkdir prueba/dir1 prueba/dir2 prueba/dir3 prueba/dir1/dir11 prueba/dir3/dir31 prueba/dir3/dir31/dir311 prueba/dir3/dir31/dir312``
 
 2. Copiar el archivo /etc/motd a un archivo llamado mensaje en el directorio prueba
 
@@ -12,7 +12,7 @@ dir31, crear los directorios dir311 y dir312.
 
 3. Copiar mensaje en dir1, dir2 y dir3. 
 
-```cp prueba/mensaje prueba/dir1 prueba/dir2 prueba/dir3 ```
+```cp -r prueba/mensaje prueba/dir1 prueba/dir2 prueba/dir3 ```
 
 4. Comprobar el ejercicio anterior mediante un solo comando.
  
@@ -49,7 +49,7 @@ una letra que vaya de la a a la b y tengan cinco letras en su nombre.
 
 12. Mover el directorio dir312 debajo de dir3.
 
-```mv dir312 dir3/```
+```mv dir2/dir31/dir312/ dir3/ ```
 
 13. Crear un enlace simbólico al directorio dir1 dentro del directorio dir3 llamado enlacedir1
 
@@ -57,7 +57,7 @@ una letra que vaya de la a a la b y tengan cinco letras en su nombre.
 
 14. Posicionarse en dir3 y, empleando el enlace creado en el ejercicio anterior, crear el directorio nuevo1 dentro de dir1.
 
-```cd dir3 && mkdir enlacedir1/nuevo1 ```
+```cd dir3/ && mkdir enlacedir1/nuevo1 ```
 
 15. Utilizando el enlace creado copiar los archivos que empiecen por u del directorio /bin en directorio nuevo1.
 
@@ -82,7 +82,7 @@ una letra que vaya de la a a la b y tengan cinco letras en su nombre.
 20. Crear el directorio dir2 y dir3 en el directorio PRUEBA ¿Cuáles son los actuales permisos del directorio dir2?
 ``` mkdir prueba/dir2 prueba/dir3 ```
 
-```775```
+```755```
 
 21. Utilizando la notación simbólica (caracteres), eliminar todos los permisos de escritura (propietario, grupo, otros) del directorio dir2
 
@@ -121,4 +121,81 @@ por omisión: rwxr--r-- para los directorios y rw-r--r—para los archivos ordin
 
 ``` mkdir dira dirb dirc dird ``` 
 
-30. 
+30. Comprobar los permisos de acceso de los directorios recién creados para comprobar el funcionamiento del comando umask.
+
+0022 
+
+31. Crear el fichero uno. Quitarle todos los permisos de lectura. Comprobarlo. Intentar borrar dicho fichero.
+
+``` Lo he borrado con total tranquilidad```
+
+32. Quitarle todos los permisos de paso al directorio dir2 y otorgarle todos los demás.
+
+``` chmod 666 dir2/``` 
+
+33. Crear en el directorio propio:
+
+- El directorio carpeta1 con los tres permisos para el propietario, dentro de él fich1
+con lectura y escritura para todos y fich2 con lectura y escritura parael
+propietario y solo lectura para el resto.
+
+``` mkdir carpeta1 && chmod u+rwx,go-rwx carpeta1 touch carpeta1/fich1 carpeta1/fich2 && chmod go+rwx fich1 && chmod u+rw,o-wx fich2  ```  
+
+- El directorio carpeta2 con todos los permisos para el propietario y lectura y
+ejecución para los del mismo grupo. Dentro file1 con lectura y escritura para el
+propietario y los del grupo y file2 con los mismos para el propietario y solo
+lectura para el grupo.
+
+``` mkdir carpeta2 && cd carpeta2 && touch file1 file2 && chmod 750 file1 && chmod 710 file2``` 
+
+34. Desde otro usuario probar todas las operaciones que se pueden hacer en los ficheros y
+directorios creados. 
+
+- Carpeta 1: Error, permiso denegado 
+- Carpeta 2: Se puede acceder 
+
+35. Crear dos directorios llamados correo y fuentes debajo del directorio actual.
+``` mkdir correo fuentes ```
+
+36. Posicionarse en el directorio fuentes y crear los directorios dir1, dir2, dir3.
+
+``` cd fuentes && mkdir dir1 dir2 dir3 ```  
+
+37. Crear el directorio menus bajo correo sin moverse del directorio actual.
+
+``` mkdir ../correo/menus ``` 
+
+38. Posicionarse en el directorio HOME. Borrar los directorios que cuelgan de fuentes que
+acaben en un número que no sea el 1.
+
+``` cd && rm -r fuentes/dir[02-9] fuentes/dir?? ``` 
+
+39. Ver si existe el archivo tty2 en el directorio dev. En caso de que exista, ver su fecha de
+creación o actualización.
+
+``` ls -l --time=creation /dev/tty2 ```
+
+40. Ver los permisos que tienen los archivos que empiecen por tt del directorio /dev. 
+
+``` ls -l /dev/tt* ``` 
+
+41. Visualizar la lista de todos los ficheros que pertenezcan a root.
+
+``` find / -user root ``` 
+
+42. Crear el directorio uno en el directorio HOME con permiso de escritura y paso para el
+propietario, de lectura y paso para los usuarios de su mismo grupo y ningún permiso
+para el resto de usuarios.
+
+``` mkdir uno && chmod u=wx,g=rx,o= ~/uno ``` 
+
+43. Crear el directorio uno1 dentro del directorio creado en el ejercicio anterior con todos lo
+permisos para el usuario, ninguno para los usuarios del grupo y permiso de escritura
+para el resto de usuarios.
+
+``` cd uno && mkdir uno1 && chmod u=rwx,g=,o=w uno1 ``` 
+
+44. Copiar todos los ficheros propiedad de un usuario conocido que acaben en un número
+en el directorio menus.
+
+``` find / -type f -user $USER -regex '.*[0-9]$' -exec cp {} /correo/menus/ \; ```
