@@ -291,5 +291,11 @@ Se nos abrira la siguiente ventana, establecemos el nombre el tipo de instantane
 # Instalacion Windows 10
 En clase se ha visto como hacer lo que se conoce como instalacion desatendida una opcion que esta en VirtualBox o Vmware pero en Libvirt no existe, por lo que yo he documentado una instalacion normal de Windows 10 
 
+Seleccionamos medio de instalacion local y pulsamos siguiente
 
+![Paso1](images/w10/1.png)
+
+Seleccionamos el archivo ISO
+
+![Paso2](images/w10/2.png)
 
