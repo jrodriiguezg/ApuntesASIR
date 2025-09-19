@@ -1,4 +1,4 @@
-# Instalación Windows Server 2022
+# Instalación Windows Server 2022 y Windows 10
 Yo voy a usar Libvirt en vez de VMware, ya que en Fedora Silverblue, que es lo que uso, no se puede instalar otra cosa. Debido a que es un sistema inmutable y las opciones de virtualizacion solo son o QEMU/KVM o podman/docker 
 
 Esta primera captura muestra la pantalla inicial de Libvirt (que es una interfaz gráfica para QEMU/KVM). En la esquina superior izquierda está el botón para crear una máquina virtual.
@@ -288,4 +288,5 @@ Se nos abrira la siguiente ventana, establecemos el nombre el tipo de instantane
 ![Crear2](images/Wserver/66.png)
 
 
+# Instalacion Windows 10
 
