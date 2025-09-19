@@ -58,9 +58,11 @@ En Linux se pueden usar varios sistemas de archivos, cada uno con sus ventajas e
 - **Swap:** No es un sistema de archivos tradicional, sino un espacio de intercambio. Se utiliza como memoria virtual para que el sistema operativo pueda mover datos de la memoria RAM al disco duro cuando la RAM se llena, mejorando el rendimiento general.
 - **Btrfs:** Un sistema más moderno que ofrece funciones avanzadas como las instantáneas (snapshots), que permiten crear copias de seguridad eficientes, y Copy-on-Write (CoW) para mayor integridad de los datos
 
-#### 3.1. mkfs
+#### 3.1. mkfs y mount
 El comando mkfs (make file system) se usa para formatear una partición usando el sistema de archivos decidido, su sintaxis es: 
 ``` sudo mkfs -t [sistema_de_ficheros] [particion]``` 
+
+El comando mount, nos permite montar particiones de manera temporal, en el sistema, el montaje no es permanente
 
 ## 4. Directorios en Linux 
 
