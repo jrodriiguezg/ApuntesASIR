@@ -332,5 +332,50 @@ En el siguiente paso nos pedira clave del producto, no tengo clave entonces puls
 
 ![Paso11](images/w10/11.png)
 
+Ahora nos pedira la version de Windows, nos desplazamos en la lista y seleccionamos **Windows 10 Pro** y pulsamos siguiente
+
+![Paso12](images/w10/12.png)
+
+En el siguiente paso seleccionamos la segunda opcion **Instalar solo windows (avanzado)**
+
+![Paso13](images/w10/13.png)
+
+Ahora nos pasara al particionado del disco, donde seleccionaremos el disco que tenemos, y pulsaremos en **Nuevo**, nos pedira el espacio del disco, cogemos todos y pulsamos en **Aplicar**
+
+![Paso14](images/w10/14.png)
+
+El particionado se deberia ver algo asi 
+
+![Paso15](images/w10/15.png)
+
+Pulsamos siguiente y comenzara la instalacion 
+
+![Paso16](images/w10/16.png)
+
+ Al acabar Windows se reiniciara, y empezara la configuracion inicial del sistema, los primeros pasos son seleccion de idioma, distribucion de teclado... 
+
+ ![Paso17](images/w10/17.png)
+
+ Despues de un par de pasos molestos, nos perdira el nombre de la cuenta, le he puesto **Usuario**
+
+ ![Paso18](images/w10/18.png)
+
+ De contraseña no le he puesto ninguna 
+
+ ![Paso19](images/w10/19.png)
+
+Ahora nos empezaran a saltar las opciones de privacidad y cortana, pulsamos **NO** en todo
+
+![Paso20](images/w10/20.png)
+
+Despues de un rato se instalara 
+
+![Paso21](images/w10/22.png)
+
+## Activacion de Windows 
+
+
+
+
 
 
