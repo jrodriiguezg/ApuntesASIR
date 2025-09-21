@@ -400,6 +400,41 @@ Desde las directivas de seguridad local, podemos ver que la cuenta de administra
 ## Instalacion de la red Virtual 
 Como ya esta creada de la instalacion de Windows Server no es neecsario crearla de nuevo, los pasos son los mismos que anteriormente, añadimos un nuevo dispositivo hardware > elegimos tarjeta de red y en el tipo de red elegimos **red virtual windows**
 
+![Paso29](images/w10/29.png)
+
+Aqui vemos que tenemos dos tarjetas de red
+
+![Paso30](images/w10/30.png)
+
+## Instalacion de las SPICE Guest Tools y el navegador
+Los pasos son los mismso que la instalacion anterior, nos las descargamos desde este [enlace](https://www.spice-space.org/download.html) y las instalamos 
+
+![Paso31](images/w10/31.png)
+
+Ahora instalaremos el navegador web, yo usare firefox, en mi caso tengo el ejecutable en mi equipo anfitrion y al instalar las Guest Tools lo paso con el arrastrar y soltar
+
+![Paso32](images/w10/32.png)
+
+## Cambio del nombre del equipo
+Para cambiar el nombre del equipos, nos vamos al administrador de archivos y en **Mi equipo** hacemos clic derecho > Propiedades, se nos abrira esta ventana 
+Pulsaremos en **Cambiar configuracion**
+
+![Paso33](images/w10/33.png)
+
+Despues pulsamos en **Cambiar** y donde pone nombre del equipo, ponemos el nuevo nombre, despues pulsamos en **Aceptar**
+
+![Paso34](images/w10/34.png)
+
+## Configuracion de la red
+Cambiamos el nombre de las tarjetas de red para reconocerlas mas facilmente como se ve en la imagen y en la tarjeta de red NAT, le pulsamos clic derecho > Propiedades > **Protocolo de internet version 4**, dejamos todo tal cual esta 
+Hacemos los mismos pasos en la red LAN, pero ahora estableceremos la direccion IP de manera manual, en este caso este cliente tendra la direccion **192.168.10.10**
+Al acabar pulsamos en **Aceptar**
+
+![Paso35_1](images/w10/35.png)
+
+![Paso35](images/w10/36.png)
+
+
 
 
 
