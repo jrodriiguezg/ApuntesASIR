@@ -19,3 +19,4 @@ Aquí encontrarás la documentación para la asignatura de Implantacion de aplic
 
 
    actividad1-instalacion-xampp 
+   ejercicios-tema2-php

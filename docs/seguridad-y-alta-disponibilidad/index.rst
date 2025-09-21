@@ -16,5 +16,5 @@ Aquí encontrarás la documentación para la asignatura de Seguridad y alta disp
    :maxdepth: 2
    :caption: Trabajos 
 
-
+   practicas-tema1
    ejercicios-tema1
