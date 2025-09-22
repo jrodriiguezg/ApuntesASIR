@@ -458,6 +458,7 @@ Esta siguiente captura muestra el ping del servidor al cliente (192.168.10.10)
 
 ![Ping_desdeServidor](images/w10/39_desdeServidor.png)
 
+## Instalacion de Active directory en el Windows Server 
 
 
 
