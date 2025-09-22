@@ -459,6 +459,10 @@ Esta siguiente captura muestra el ping del servidor al cliente (192.168.10.10)
 ![Ping_desdeServidor](images/w10/39_desdeServidor.png)
 
 ## Instalacion de Active directory en el Windows Server 
+Para instalar el Active directory (controlador de dominio) en windows server, nos vamos al administrador del servidor > Administrar > Instalar Roles y caracteristicas 
+
+![Paso38](images/Wserver/68.png)
+
 
 
 
