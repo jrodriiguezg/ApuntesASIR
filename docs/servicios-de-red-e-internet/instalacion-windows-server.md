@@ -463,6 +463,14 @@ Para instalar el Active directory (controlador de dominio) en windows server, no
 
 ![Paso38](images/Wserver/68.png)
 
+Se nos abre esta ventana con un resumen de lo que se va a hacer, pulsamos **Siguiente**
+
+![Paso39](images/Wserver/69.png)
+
+Seleccionamos **Instalacion basada en roles y caracteristicas** y pulsamos siguiente 
+
+![Paso40](images/Wserver/70.png)
+
 
 
 
