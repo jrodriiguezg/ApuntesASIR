@@ -434,7 +434,29 @@ Al acabar pulsamos en **Aceptar**
 
 ![Paso35](images/w10/36.png)
 
+## Desactivacion de las actualizaciones firewall y establecer contraseña al administrador 
+Para desactivar las actualziaciones, nos vamos a configuracion > Actualizaciones y serguridad > Opciones avanzadas y desactivamos todas las opciones 
 
+![Paso36](images/w10/37.png)
+
+Para desactivar el firewall seguimos los mismo pasos que en Windows server 
+
+![Paso37](images/w10/38.png)
+
+Para establecer la contraseña al administrador seguimos los mismos pasos que en windows server 
+
+![Contraseña](images/w10/40.png)
+
+## Comprobacion del funcionamiento de la red LAN entre maquinas 
+Mediante el uso de la herramienta ping, hacemos ping del servidor al cliente y del cliente al servidor 
+
+Esta primera captura muestra el ping desde el cliente hacia el servidor (192.168.10.1)
+
+![Ping_desdeCliente](images/w10/39_desdeCliente.png)
+
+Esta siguiente captura muestra el ping del servidor al cliente (192.168.10.10)
+
+![Ping_desdeServidor](images/w10/39_desdeServidor.png)
 
 
 
