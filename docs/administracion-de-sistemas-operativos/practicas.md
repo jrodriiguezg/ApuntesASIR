@@ -24,7 +24,7 @@ cp /etc/motd prueba/mensaje
 cp -r prueba/mensaje prueba/dir1 prueba/dir2 prueba/dir3 
 ```
 **Explicacion:**
-    - ```cp``: Copia ficheros o carpetas el parametro **-r** es para hacerlo de manera recursiva
+    - ```cp```: Copia ficheros o carpetas el parametro **-r** es para hacerlo de manera recursiva
 
 4. Comprobar el ejercicio anterior mediante un solo comando.
  
