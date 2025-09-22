@@ -471,6 +471,67 @@ Seleccionamos **Instalacion basada en roles y caracteristicas** y pulsamos sigui
 
 ![Paso40](images/Wserver/70.png)
 
+Seleccionamos el servidor de destino de la instalacion, solo hay uno por lo que no hay problemas y pulsamos siguiente 
+
+![Paso41](images/Wserver/71.png)
+
+Ahora en la lista debemos buscar los **Servicios de dominio de active directory** los pulsamos
+
+![Paso42](images/Wserver/72.png)
+![Paso43](images/Wserver/73.png)
+![Paso44](images/Wserver/74.png)
+
+En la siguiente opcion nos habla de las caracteristicas, lo dejamos por defecto y pulsamos **Siguiente**
+
+![Paso45](images/Wserver/75.png)
+
+Con la opcion de azure saltamos, pulsando **siguiente**
+
+![Paso46](images/Wserver/76.png)
+
+Ahora pulsaremos en **Instalar**
+
+![Paso47](images/Wserver/77.png)
+![Paso48](images/Wserver/78.png)
+
+Nos saltara el aviso de promocionar el equipo a **Controlador de dominio**, le pulsamos 
+
+![Paso49](images/Wserver/79.png)
+
+Se nos abrira una ventana nueva, marcamos la casilla de **agregar un nuevo bosque**, nos pedira que especifiquemos el nombre del dominio raiz, importante poner el final del dominio es decir **.es**, **.edu**, etc. Si no nos saldra el error que vemos en la imagen en rojo.
+
+![Paso50](images/Wserver/80.png)
+
+En la imagen siguiente vemos como al poner el dominio **dominiow25jrrg.edu** ya nos permite continuar 
+
+![Paso51](images/Wserver/81.png)
+
+En el siguiente paso, el nivel funcional lo dejamos por defecto y la contraseña le ponemos **Administardor1** y pulsamos siguiente 
+
+![Paso52](images/Wserver/82.png)
+
+Ahora nos preguntara si queremos crear una delegacion DNS, no marcamos nada y pulsamos **Siguiente**
+
+![Paso53](images/Wserver/83.png)
+
+El nombre de NetBIOS no lo rellena de manera autoamtica, por lo que solo debemos pulsar **Siguiente**
+
+![Paso54](images/Wserver/84.png)
+
+Y las rutas de los archivos dejamos las por defecto, pulsamos **Siguiente**
+
+![Paso55](images/Wserver/85.png)
+
+Ahora nos mostrara las configuraciones que se van a hacer, pulsamos **Siguiente**
+
+![Pas56](images/Wserver/86.png)
+
+Para finalizar, si todo ha salido bien, 
+
+
+
+
+
 
 
 

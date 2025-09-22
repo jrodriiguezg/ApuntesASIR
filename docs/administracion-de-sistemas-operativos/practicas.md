@@ -199,3 +199,4 @@ para el resto de usuarios.
 en el directorio menus.
 
 ``` find / -type f -user $USER -regex '.*[0-9]$' -exec cp {} /correo/menus/ \; ```
+
