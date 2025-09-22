@@ -38,8 +38,7 @@ dir31, crear los directorios dir311 y dir312.
 
 ``` sudo rm -rf dir1/ ```
 
-10. Copiar al directorio dir312 los ficheros del directorio /dev que empiecen por t, acaben en
-una letra que vaya de la a a la b y tengan cinco letras en su nombre.
+10. Copiar al directorio dir312 los ficheros del directorio /dev que empiecen por t, acaben en una letra que vaya de la a a la b y tengan cinco letras en su nombre.
 
 ````cp /dev/t??[a-b] dir312/````
 
@@ -199,4 +198,71 @@ para el resto de usuarios.
 en el directorio menus.
 
 ``` find / -type f -user $USER -regex '.*[0-9]$' -exec cp {} /correo/menus/ \; ```
+
+45. Crea un archivo de tamaño 0
+
+``` touch archivo ``` 
+
+46. Utilizando de entrada la información de los usuarios conectados al sistema, guardar,
+ordenadas por el campo hora, las líneas correspondientes al usuario que se desee en el
+archivo persona.
+
+```who | grep $USER | sort -k4,4 -k5,5 > persona```
+
+47. Crear el directorio carpeta debajo del directorio PRUEBA. Quitarle todos los permisos de lectura. A continuación, buscar todos los directorios que cuelguen del directorio propio y guardarlos en el archivo direc.
+
+``` mkdir carpeta && chmod 333 carpeta && find . -type d > direc ``` 
+
+48. Volver a realizar la segunda parte del ejercicio anterior, pero redireccionando los errores al fichero malos. Comprobar la información del fichero malos.
+
+``` find . -type d 2> malos ``` 
+
+49. Añadir al fichero direc la lista de todos los ficheros ordinarios que cuelguen de /etc
+
+```find /etc -type f >> direc ``` 
+
+50. Sacar por pantalla únicamente el tiempo (buscar comando time) que tarda en ejecutarse el comando who.
+
+```time who``` 
+
+51. Sacar por pantalla un listado completo (buscar comando ps) de los procesos que está realizando el usuario root.
+
+``` sudo ps ``` 
+
+52. Averiguar cuál es la actividad actual del sistema. Para ello visualice un listado completo del estado de todos los procesos que se están ejecutando en el sistema.
+
+    1. Obtener un listado con los siguientes datos de los procesos de tu Shell actual.
+    ``` ps aux ``` 
+    2. Mostrar cuantos usuarios tiene registrados el sistema (el registro de usuarios
+    está en el archivo /etc/passwd)
+    ``` cat /etc/passwd ``` 
+    3. Mostrar cuántos usuarios tiene registrados el sistema y que utilizan el intérprete bash (debe aparecer al final de la línea /bin/bash o similar)
+    ``` cat /etc/passwd | grep "/bin/bash" ``` 
+    4. Mostrar cuantos usuarios hay conectados
+    ``` who ``` 
+
+53. Extraer los nombres de usuario (primer campo) del sistema
+
+```cat /etc/passwd | cut -d: -f1 ```  
+
+54. Extraer los nombres de usuario y el shell que utilizan (último campo) 
+
+``` cat /etc/passwd | cut -d: -f1,7``` 
+
+55. Cambiar la fecha de creación de un archivo ya previamente creado 60. Monitorear la
+ocupación de las particiones en los discos
+
+``` touch -t 0102031445.34 direc ``` 
+
+56. Monitorear laocupación de las particiones en los discos
+
+``` df -h ``` 
+
+61. ¿Cuál es el proceso que más carga el procesador?
+
+``` top ``` o ``` htop  ``` 
+
+62. ¿Cuántos procesos que empiecen por k están corriendo? 
+
+``` ps -ef | grep '[kK]' | grep -v 'grep' ``` 
 
