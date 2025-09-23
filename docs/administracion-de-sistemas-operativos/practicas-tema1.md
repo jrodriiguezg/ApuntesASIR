@@ -243,13 +243,13 @@ chmod 666 dir2/
 ```
 
  33. Crear en el directorio propio:
-#  El directorio carpeta1 con los tres permisos para el propietario, dentro de él fich1 con lectura y escritura para todos y fich2 con lectura y escritura para el propietario y solo lectura para el resto.
+  1. El directorio carpeta1 con los tres permisos para el propietario, dentro de él fich1 con lectura y escritura para todos y fich2 con lectura y escritura para el propietario y solo lectura para el resto.
 
 ```bash
 mkdir carpeta1 && chmod u+rwx,go-rwx carpeta1 touch carpeta1/fich1 carpeta1/fich2 && chmod go+rwx fich1 && chmod u+rw,o-wx fich2
 ```
 
-# El directorio carpeta2 con todos los permisos para el propietario y lectura y ejecución para los del mismo grupo. Dentro file1 con lectura y escritura para el propietario y los del grupo y file2 con los mismos para el propietario y solo lectura para el grupo.
+  2. El directorio carpeta2 con todos los permisos para el propietario y lectura y ejecución para los del mismo grupo. Dentro file1 con lectura y escritura para el propietario y los del grupo y file2 con los mismos para el propietario y solo lectura para el grupo.
 
 ```bash
 mkdir carpeta2 && cd carpeta2 && touch file1 file2 && chmod 750 file1 && chmod 710 file2

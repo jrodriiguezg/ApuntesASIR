@@ -17,7 +17,7 @@ Aquí encontrarás la documentación para la asignatura de Administración de si
 
 
    proyecto
-   practicas
+   practicas-tema1
 
 .. toctree::
    :maxdepth: 2
