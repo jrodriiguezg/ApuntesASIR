@@ -76,3 +76,12 @@
 - ```rpm install -i [paquete]```: Instala paquetes 
 
 ## Comandos de red 
+
+- ```ftp```: Cliente FTP.
+```wget```: Gestor de descargas. ```wget -p -r -k URL``` descarga una web completa de forma recursiva.
+- ```netstat -napt```: Muestra los puertos abiertos del sistema y los procesos asociados.
+    - ```-n```: No resuelve nombres de dominio.
+    - ```-a```: Muestra todas las conexiones.
+    - ```-p```: Muestra el número y nombre del proceso.
+    - ```-t```: Muestra solo conexiones TCP.
+
