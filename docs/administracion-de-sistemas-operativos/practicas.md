@@ -392,14 +392,14 @@ sudo ps
 **Explicación**
 
 - ```ps```: Se usa para ver los procesos del sistema 
- 52. Averiguar cuál es la actividad actual del sistema. Para ello visualice un listado completo del estado de todos los procesos que se están ejecutando en el sistema.
+52. Averiguar cuál es la actividad actual del sistema. Para ello visualice un listado completo del estado de todos los procesos que se están ejecutando en el sistema.
 
-# 1. Obtener un listado con los siguientes datos de los procesos de tu Shell actual.
+  1. Obtener un listado con los siguientes datos de los procesos de tu Shell actual.
 
 ``` bash
 ps aux 
 ```
-# 2. Mostrar cuantos usuarios tiene registrados el sistema (el registro de usuarios está en el archivo /etc/passwd)
+  2. Mostrar cuantos usuarios tiene registrados el sistema (el registro de usuarios está en el archivo /etc/passwd)
 
 ```bash
 cat /etc/passwd 
@@ -407,19 +407,19 @@ cat /etc/passwd
 **Explicación**
 
 - ```cat```: Es un visor de archivos por terminal, permite ver el contenido de cualquier archivo con texto
-# 3. Mostrar cuántos usuarios tiene registrados el sistema y que utilizan el intérprete bash (debe aparecer al final de la línea /bin/bash o similar)
+  3. Mostrar cuántos usuarios tiene registrados el sistema y que utilizan el intérprete bash (debe aparecer al final de la línea /bin/bash o similar)
 
 ```bash
 cat /etc/passwd | grep "/bin/bash" 
 ```
 
-# 4. Mostrar cuantos usuarios hay conectados
+  4. Mostrar cuantos usuarios hay conectados
 
 ```bash
 who 
 ```
 
- 53. Extraer los nombres de usuario (primer campo) del sistema
+53. Extraer los nombres de usuario (primer campo) del sistema
 
 ```bash
 cat /etc/passwd | cut -d: -f1 
@@ -428,13 +428,13 @@ cat /etc/passwd | cut -d: -f1
 
 - ```cut```: Permite filtrar lineas de texto en base a unos parámetros, con el parámetro **-d** le decimos el delimitador por el que se separan las cadenas de caracteres, y con **-f** le decimos la fila que vamos a usar
 
- 54. Extraer los nombres de usuario y el shell que utilizan (último campo)
+54. Extraer los nombres de usuario y el shell que utilizan (último campo)
 
 ```bash
 cat /etc/passwd | cut -d: -f1,7
 ```
 
- 55. Cambiar la fecha de creación de un archivo ya previamente creado 
+55. Cambiar la fecha de creación de un archivo ya previamente creado 
 
 ```bash 
 touch -t 0102031445.34 direc 
@@ -464,7 +464,7 @@ top  o  htop
 - ```top y htop ```: Son visores de procesos por terminal 
   
 
-# 62. ¿Cuántos procesos que empiecen por k están corriendo?
+ 62. ¿Cuántos procesos que empiecen por k están corriendo?
 
 ```bash 
 ps -ef | grep '[kK]' | grep -v 'grep' 
