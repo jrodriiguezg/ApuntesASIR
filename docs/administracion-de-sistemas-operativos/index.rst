@@ -19,5 +19,10 @@ Aquí encontrarás la documentación para la asignatura de Administración de si
    proyecto
    practicas
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Chuletarios
+
+   chuletario-linux
 
   
