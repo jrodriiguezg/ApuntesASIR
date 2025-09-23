@@ -67,13 +67,34 @@
 - ```quota -g nomb_grupo```: Verifica la cuota de un grupo.
 - ```repquota```: Muestra un resumen de las cuotas.
 
-## Instalación de Paquetes
+## Gestion de paquetes
 **Familias debian**
-- ```apt install```: Instala paquetes desde repositorios 
-- ```dpkg -i [paquete]```: Instala paquetes 
+- ```apt```: Gestor de paquetes aptitude 
+    - ```apt install```: Instala paquetes 
+    - ```apt update```: Actualiza la base de datos de repositorios
+    - ```apt upgrade```: Actualiza el sistema
+- ```dpkg -i [paquete]```: Instala paquetes en formado **.deb**
+
 **Familias RHEL**
-- ```dnf install```: Instala paquetes desde repositorios
-- ```rpm install -i [paquete]```: Instala paquetes 
+- ```dnf```: Gestor de paquetes anteriormente **yum**
+    - ```dnf install```: Instala paquetes
+    - ```dnf update```: Actualiza la base de datos de repositorios y el sistema 
+- ```rpm install -i [paquete]```: Instala paquetes en formato **.rpm**
+
+**Universales**
+- ```snap```: Gestor de paquetes en modo sandbox compatible con todas las distribuciones 
+    - ```snap install```: Instala paquetes 
+    - ```snap update```: Actualiza los paquetes snap 
+- ```flatpak```: Igual que snap pero querido por la comunidad y con mas capacidades
+    - ```flatpak install```: Para instalar paquetes 
+    - ```flatpak update```: Para actualizar paquetes 
+
+**Empaquetadores universales**
+Definimos empaquetador como el formato en el que van los paquetes de software, por ejemplo en familias ubuntu tenemos los **.deb**
+
+- ```AppImage```:Se pueden instalar en cualquier sistema tienen terminacion **.appimage**, se instalan usando un gestor como gear level o **chmod +x fichero.appimage** y despues **./fichero.appimage**
+- ```tar.gz```: Normalmente incluyen el codigo fuente de la aplicacion, se suelen instalar usando **make y make install** (ya que necesitan ser compilados)
+- ```.run```: Son instaladores auto ejecutables, se ejecutan desde un terminal, **chmod +x fichero.run** y despues **./fichero.run**
 
 ## Comandos de red 
 
