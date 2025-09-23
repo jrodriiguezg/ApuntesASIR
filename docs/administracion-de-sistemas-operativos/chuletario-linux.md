@@ -35,4 +35,44 @@
 
 - ```find [patron]```: Busca coincidencias con un patrón.
     - ```find [ruta] [patron]```: Busca coincidencias con el patrón dentro de una ruta.
-    
+
+## Gestión de Discos y Particiones
+
+- ```fdisk```: Permite crear particiones.
+- ```fsck```: Permite formatear una partición.
+- ```df```: Indica el espacio libre del sistema de ficheros.
+- ```du```: Indica el espacio utilizado.
+- ```mount```: Monta un dispositivo (ej. mount /mnt/cdrom).
+- ```Raidhotadd```: Añade discos en caliente a un RAID.
+- ```Raidhotremove```: Elimina discos en caliente de un RAID.
+- ```Raidreconf```: Copia datos de un disco duro a un RAID.
+- ```Raidsetfaulty```: Marca un disco como defectuoso.
+- ```Raidstart```: Inicia un sistema RAID.
+- ```Raidstop```: Para un sistema RAID.
+
+## Gestion de usuarios y contraseñas 
+
+- ```pwconv```: Crea y actualiza el fichero  (/etc/shadow).
+- ```pwuncov```: Desactiva las contraseñas de (/etc/shadow).
+- ```adduser [usuario]```: Crea usuarios 
+- ```useradd```: Crea usuarios pero preguntando por su informacion
+- ```passwd [usuario]```: Establece la contraseña a un usuario 
+- ```su [usuario]```: Cambia la sesion de la terminal a ese usuario 
+
+## Cuota de disco 
+
+- ```edquota usuario```: Asigna cuota a un usuario.
+- ```edquota -g grupo```: Asigna cuota a un grupo.
+- ```quota nomb_usuario```: Verifica la cuota de un usuario.
+- ```quota -g nomb_grupo```: Verifica la cuota de un grupo.
+- ```repquota```: Muestra un resumen de las cuotas.
+
+## Instalación de Paquetes
+**Familias debian**
+- ```apt install```: Instala paquetes desde repositorios 
+- ```dpkg -i [paquete]```: Instala paquetes 
+**Familias RHEL**
+- ```dnf install```: Instala paquetes desde repositorios
+- ```rpm install -i [paquete]```: Instala paquetes 
+
+## Comandos de red 
