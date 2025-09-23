@@ -445,10 +445,13 @@ touch -t 0102031445.34 direc
 
 ### 56. Monitorear la ocupación de las particiones en los discos
 
-
 ```bash
 df -h
  ```
+
+**Explicación**
+
+- ```df -h```: Muestra la espacio libre en los discos, con el parametro **-h** le decimos que sea en un formato mas amigable
 
 
 ### 61. ¿Cuál es el proceso que más carga el procesador?
@@ -466,3 +469,8 @@ top  o  htop
 ```bash 
 ps -ef | grep '[kK]' | grep -v 'grep' 
 ```
+**Explicación**
+
+- ```ps -ef```: Muestra los procesos activos, el parametro **-e** muestro los del usuario actual y el parametro **-f** muestra un listado completo con detalles 
+- ```grep '[kK]' ```: Grep busca patrones en los ficheros y **'[kK]'** es el patron de busqueda ya que busca lineas que contengan las letras **K**
+- ```grep -v 'grep' ```: Vuelve a repetir el filtrado con el parametro **-v** en orden inverso y le decimos que no incluya lineas que ponga **grep**  
