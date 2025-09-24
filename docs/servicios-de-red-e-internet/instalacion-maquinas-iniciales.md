@@ -714,12 +714,16 @@ Ahora inciamos sesion con el usuario **root**
 
 ![Paso105](images/ubuntu/35.png)
 
-Y le cambiamos bash por fish con el siguiente comando, las ventajas de fish es que mete colores, recuerda comandos ya usados y autocompleta con mas facilidad que bash, usamos el siguiente comando 
+Volviendo a aprovechar que la clase va lenta  le cambiamos bash por fish con el siguiente comando, las ventajas de fish es que mete colores, recuerda comandos ya usados y autocompleta con mas facilidad que bash, usamos el siguiente comando 
 ```bash 
 chsh -s /usr/bin/fish
 ```
 
 ![Paso106](images/ubuntu/37.png)
+
+Aqui vemos un poco fish, que nos permite autocompletar comandos anteriores, y al tabular aparte de mostarnos los comandos posibles nos pone que hacen (en ingles)
+
+![Paso107](images/ubuntu/38.png)
 
 
 
