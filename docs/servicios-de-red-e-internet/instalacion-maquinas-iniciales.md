@@ -654,6 +654,28 @@ Le he cambiado el nombre a la maquina
 
 ![Paso87](images/ubuntu/16.png)
 
+Iniciamos la maquina 
+
+![Paso88](images/ubuntu/17.png)
+
+Ahora todas estas preguntas, vamos rapido con ellas, reportes de errores le decimos que no, livepatch que no tampoco y servicios de ubicacion, tampoco los queremos 
+
+![Paso89](images/ubuntu/18.png)
+![Paso90](images/ubuntu/19.png)
+![Paso91](images/ubuntu/20.png)
+![Paso92](images/ubuntu/21.png)
+
+Se iniciara el escritorio de ubuntu 
+
+![Paso93](images/ubuntu/22.png)
+
+Aprovechando el tiempo le he cambiado el nombre al usuario desde la configuracion 
+
+![Paso94](images/ubuntu/23.png)
+
+
+
+
 
 
 
