@@ -657,6 +657,8 @@ Le he cambiado el nombre a la maquina
 
 ![Paso87](images/ubuntu/16.png)
 
+## Configuracion de Ubuntu
+
 Iniciamos la maquina 
 
 ![Paso88](images/ubuntu/17.png)
