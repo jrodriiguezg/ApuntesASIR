@@ -589,6 +589,55 @@ Ahora en **Servidor Local**, pulsamos en **Seguridad mejorada de IE** y desactiv
 
 
 ## Instalacion de Ubuntu 
+Ahora vamos a instalar Ubuntu, no especifico si servidor o cliente ya que el mismo vale para ambos instalaremos uno y lo clonaremos, en clase se ha hecho una instalacion desetentidad pero yo no puedo hacerla 
+
+Le damos a nueva maquina virtual, **medio de instalacion local** y adelante
+![Paso72](images/ubuntu/1.png)
+
+Seleccinamos la ISO y pulsamos adelante 
+
+![Paso73](images/ubuntu/2.png)
+
+En la configuracion de RAM y CPU, lo dejamos por defecto 
+
+![Paso74](images/ubuntu/3.png)
+
+El disco por defecto nos dice 20Gb yo lo he puesto en 60Gb y pulsamos adelante 
+
+![Paso75](images/ubuntu/4.png)
+
+He puesto cliente en el nombre pero este es el server, pero como son iguales no pasa nada, luego lo cambio 
+
+![Paso76](images/ubuntu/5.png)
+
+Se iniciara la maquina y nos pedira el idioma del instalador, con el teclado se selecciona **Español**
+
+![Paso77](images/ubuntu/6.png)
+
+En el selector del modo de instalacion, elegimos **Instalar ubuntu** 
+
+![Paso78](images/ubuntu/7.png)
+
+Se abrira el instalador y seleccionamos el idioma **Español** y pulsamos continuar 
+
+![Paso79](images/ubuntu/8.png)
+
+Ahora la disposicion de teclado dejamos por defecto y pulsamos continuar 
+
+![Paso80](images/ubuntu/9.png)
+
+Ahora en el tipo de instalacion, selecciono **Instalacion minima** para que menos cosas 
+
+![Paso81](images/ubuntu/10.png)
+
+No voy a hacer particionado por lo que elijo la primera opcion y que lo haga automatico 
+
+![Paso82](images/ubuntu/11.png)
+
+
+
+
+
 
 
 
