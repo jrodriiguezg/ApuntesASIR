@@ -676,6 +676,51 @@ Aprovechando el tiempo le he cambiado el nombre al usuario desde la configuracio
 
 ![Paso94](images/ubuntu/23.png)
 
+Ahora cambiamos el inicio de sesion e iniciamos sesion con **Administrador**
+
+![Paso95](images/ubuntu/24.png)
+
+Actualizaremos los repositorios y el sistema todo en una linea con el comando 
+```bash 
+sudo apt update && sudo apt upgrade 
+```
+
+![Paso96](images/ubuntu/25.png)
+![Paso97](images/ubuntu/26.png)
+
+Ahora accederemos con el usuario **root** 
+
+![Paso98](images/ubuntu/28.png)
+
+Le establecemos la contraseña al usuario root
+
+![Paso99](images/ubuntu/29.png)
+
+Ahora modificamos el fichero ```/etc/gdm3/custom.conf/``` para permitir el inicio de sesion con el usuario **root** y agregamos la linea ```AllowRoot = true``` 
+
+![Paso100](images/ubuntu/30.png)
+![Paso101](images/ubuntu/31.png)
+
+Ahora modificamos otro fichero para lo mismo que antes, en este caso solo agregamos un **#**
+
+![Paso102](images/ubuntu/32.png)
+![Paso103](images/ubuntu/33.png)
+
+Aprovecho que la clase va algo mas lenta e instalo las guest-adittions y fish que es un bash con esteroides 
+
+![Paso104](images/ubuntu/34.png)
+
+Ahora inciamos sesion con el usuario **root**
+
+![Paso105](images/ubuntu/35.png)
+
+Y le cambiamos bash por fish con el siguiente comando, las ventajas de fish es que mete colores, recuerda comandos ya usados y autocompleta con mas facilidad que bash, usamos el siguiente comando 
+```bash 
+chsh -s /usr/bin/fish
+```
+
+![Paso106](images/ubuntu/37.png)
+
 
 
 
