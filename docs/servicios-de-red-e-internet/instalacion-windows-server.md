@@ -458,7 +458,7 @@ Esta siguiente captura muestra el ping del servidor al cliente (192.168.10.10)
 
 ![Ping_desdeServidor](images/w10/39_desdeServidor.png)
 
-## Instalacion de Active directory en el Windows Server 
+## Instalacion de Active directory en el Windows Server y configuracion
 Para instalar el Active directory (controlador de dominio) en windows server, nos vamos al administrador del servidor > Administrar > Instalar Roles y caracteristicas 
 
 ![Paso38](images/Wserver/68.png)
@@ -526,9 +526,70 @@ Ahora nos mostrara las configuraciones que se van a hacer, pulsamos **Siguiente*
 
 ![Pas56](images/Wserver/86.png)
 
-Para finalizar, si todo ha salido bien, 
+Para finalizar, si todo ha salido bien, nos aparecera arriba el aviso (los avisos en amarillo son solo advertencias).
+
+![Paso57](images/Wserver/87.png)
+
+El servidor se reiniciara para completar la instalacion 
+
+![Paso58](images/Wserver/88.png)
+
+Y al volver a arrancar veremos como el inicio de sesion ha cambiado 
+
+![Paso59](images/Wserver/89.png)
+
+Ahora en el servidor quitaremos el firewall 
+
+![Paso60](images/Wserver/92antesde91.png)
+
+Y en el cliente pondremos la direccion del servidor como DNS primario, 
+
+![Paso61](images/Wserver/91.png)
+
+Ahora vamos a unir el cliente al dominio, para ello nos vamos al mismo sitio en el que cambiamos el nombre del equipo, pero esta vez, nos vamos a la seccion de **Miembro de** y seleccionamos **Dominio** despues pulsamos **Aceptar**
+
+![Paso62](images/Wserver/93.png)
+
+Nos pedira las contraseñas del usuario Administrador del servidor 
+
+![Paso63](images/Wserver/94.png)
+
+Despues nos avisara que el cliente se ha unido al dominio correctamente y reiniciamos
+
+![Paso64](images/Wserver/95.png)
+
+Al reiniciar nos vamos a iniciar sesion con otro usuario, sabemos que estamos haciendolo bien, por que nos dice **Iniciar sesion en (y el nomrbe del cliente)**
+
+![Paso65](images/Wserver/96.png)
+
+Ahora en el servidor y desde el administardor del servidor, nos vamos a herramientas > **Usuarios y equipos de active directory**
+
+![Paso66](images/Wserver/97.png)
+
+Podemos ver que el cliente esta unido en el panel de **Usuarios y equipos de active directory**
+
+![Paso67](images/Wserver/98.png)
+
+El firewall se reactivara al reinciar, por lo que lo desactivamos, tanto en el cliente como en el servidor
+
+![Paso68](images/Wserver/99.png)
+![Paso68](images/Wserver/100.png)
+
+En el cliente podemos verificar que se ha unido de manera correcta al dominio, desde el panel de Sistema y seguridad > Sistema 
+
+![Paso69](images/Wserver/101.png)
+
+Ahora deberemos desactivar la compelejidad de la contraseña ya que a mi se me ha vuelto a activar, para ello nos vamos a Administrar > Administrador de directivas de grupo > Bosque > Dominios > nuestro dominio > **Default domain policy** y hacemos clic derecho > editar, se nos abrira el **Editor de administracion de directivas de grupo** y nos vamos a Configuracion de equipo > Directivas > Configuracion de Windows > Directivas de cuenta > Directivas de contraseña y verificamos si el apartado de **La contraseña debe cumplir los requisitos de complejidad** esta en **desabilitada**
+
+![Paso70](images/Wserver/102.png)
+
+Ahora en **Servidor Local**, pulsamos en **Seguridad mejorada de IE** y desactivamos todo 
+
+![Paso71](images/Wserver/103.png)
 
 
+
+## Instalacion de Ubuntu 
 
 
 
