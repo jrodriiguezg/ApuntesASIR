@@ -589,6 +589,7 @@ Ahora en **Servidor Local**, pulsamos en **Seguridad mejorada de IE** y desactiv
 
 
 # Instalacion de Ubuntu 
+## Creacion de la maquina virtual
 Ahora vamos a instalar Ubuntu, no especifico si servidor o cliente ya que el mismo vale para ambos instalaremos uno y lo clonaremos, en clase se ha hecho una instalacion desetentidad pero yo no puedo hacerla 
 
 Le damos a nueva maquina virtual, **medio de instalacion local** y adelante
@@ -609,6 +610,8 @@ El disco por defecto nos dice 20Gb yo lo he puesto en 60Gb y pulsamos adelante
 He puesto cliente en el nombre pero este es el server, pero como son iguales no pasa nada, luego lo cambio 
 
 ![Paso76](images/ubuntu/5.png)
+
+## Instalacion de Ubuntu en la maquina virtual
 
 Se iniciara la maquina y nos pedira el idioma del instalador, con el teclado se selecciona **Español**
 
