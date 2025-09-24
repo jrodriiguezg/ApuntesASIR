@@ -634,6 +634,26 @@ No voy a hacer particionado por lo que elijo la primera opcion y que lo haga aut
 
 ![Paso82](images/ubuntu/11.png)
 
+En la ubicacion, lo dejo por defecto 
+
+![Paso83](images/ubuntu/12.png)
+
+Ahora configuramos lass opciones del usuario, me he equivocado en el nombre de usuario, he puesto administardor en vez de usuario, ahora si he puesto bien que esto es el servidor 
+
+![Paso84](images/ubuntu/13.png)
+
+Ahora comenzara la instalacion y le dejamos su tiempo 
+
+![Paso85](images/ubuntu/14.png)
+
+Al finalizar los avisara de que reiniciemos, le decimos que si 
+
+![Paso86](images/ubuntu/15.png)
+
+Le he cambiado el nombre a la maquina 
+
+![Paso87](images/ubuntu/16.png)
+
 
 
 
