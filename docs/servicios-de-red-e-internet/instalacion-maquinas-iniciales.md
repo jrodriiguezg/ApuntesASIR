@@ -588,7 +588,7 @@ Ahora en **Servidor Local**, pulsamos en **Seguridad mejorada de IE** y desactiv
 ![Paso71](images/Wserver/103.png)
 
 
-## Instalacion de Ubuntu 
+# Instalacion de Ubuntu 
 Ahora vamos a instalar Ubuntu, no especifico si servidor o cliente ya que el mismo vale para ambos instalaremos uno y lo clonaremos, en clase se ha hecho una instalacion desetentidad pero yo no puedo hacerla 
 
 Le damos a nueva maquina virtual, **medio de instalacion local** y adelante
