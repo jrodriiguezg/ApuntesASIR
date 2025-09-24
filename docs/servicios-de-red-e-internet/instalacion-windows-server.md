@@ -588,8 +588,9 @@ Ahora en **Servidor Local**, pulsamos en **Seguridad mejorada de IE** y desactiv
 ![Paso71](images/Wserver/103.png)
 
 
-
 ## Instalacion de Ubuntu 
+
+
 
 
 
