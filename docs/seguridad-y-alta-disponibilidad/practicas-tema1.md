@@ -76,3 +76,59 @@ Vemos que ya ha finalizado y nos ha informado de los hosts que hay activos
 
 ![Paso2](images/ejercicios/15.png)
 
+# Practica 2 - Analisis forense 
+
+## 1. Analisis de cookies
+Para localizar los ficheros de cookies en Linux usamos 
+```bash 
+find $HOME -type f -name '*cookies.sqlite*' -print 2>/dev/null
+find $HOME -type f -name 'Cookies' -print 2>/dev/null
+```
+La base de datos esta cifrada como era de esperar
+![Cookie_firefox](images/ejercicios/16.png)
+
+## 2. Ver los sitios donde se ha navegado 
+Para localizar los ficheros de historial en Linux usamos
+```bash 
+find $HOME -type f -name '*history' -print 2>/dev/null
+find $HOME -type f -name 'History' -print 2>/dev/null
+``` 
+En cambio la base de datos del historial si que es visible 
+
+![Historial_firefox](images/ejercicios/17.png)
+
+## 3. Ver historial de apps usadas
+En linux no esta esta opcion, se puede ver el historial de comandos usados en la terminal 
+```bash 
+#Ver el historial de comandos del usuario 
+cat $HOME/.bash_history
+
+#Buscar otros archivos de historial 
+find $HOME -type f -name '.*history' -print 2>/dev/null
+```
+
+![bash_history](images/ejercicios/19.png)
+## 4. Herramienta MuiCacheView (Programas Lanzados)
+El concepto de MuiCache es específico de Windows. En Linux, el lanzamiento de programas puede ser rastreado a través de logs del sistema 
+```bash 
+journalctl -n 50 -r -o short-monotonic
+``` 
+![journalctl](images/ejercicios/18.png)
+
+## 5. Búsqueda de miniaturas de fotos (borradas)
+```bash 
+find $HOME/.cache/thumbnails/ -type f -print 2>/dev/null | head -n 10
+```
+![cache_imagen](images/ejercicios/20.png)
+
+## 6. Captura del contenido de la memoria RAM (DUMPIT)
+```bash 
+sudo /sbin/insmod lime-$(uname -r).ko path=/ruta/a/Evidencias/ram_dump.lime format=lime
+``` 
+A mi no me funciona ya que me pide un modulo del kernel que ni tengo ni voy a compilar que pierdo las claves del secure boot 
+
+## 7. Captura de la memoria de paginación (pagefile.sys)
+``` bash
+# Indentificamos la particion SWAP
+swapon -s
+```
