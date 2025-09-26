@@ -760,6 +760,18 @@ Iniciara la clonacion y al final veremos como se ha clonado
 ![Paso118](images/ubuntu/50.png)
 ![Paso119](images/ubuntu/51.png)
 
+Ahora cambiaremos el nombre del cliente (hostname), para ello hay que usar el comando 
+```bash 
+nano /etc/hostname
+```
+![Paso120](images/ubuntu/39.png)
+![Paso121](images/ubuntu/40.png)
+
+Ahora editaremos las tarjetas de red del cliente, les cambiamos el nombre tanto a la NAT como a la LAN y en la LAN pondremos la direccion IP como **192.168.20.10**
+![Paso122](images/ubuntu/52.png)
+![Paso123](images/ubuntu/53.png)
+![Paso124](images/ubuntu/54.png)
+
 
 
 
