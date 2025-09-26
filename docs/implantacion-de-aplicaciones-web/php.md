@@ -108,6 +108,9 @@ Array
 - **Logicos:** &&, ||, !
 Por ejemplo: 
 ```php 
+activo = true;
+edad = 18;
+
 if ($edad >= 18 && $activo) {
 echo "Acceso permitido";
 }
