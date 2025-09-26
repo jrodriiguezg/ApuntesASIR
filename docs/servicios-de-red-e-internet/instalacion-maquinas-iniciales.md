@@ -728,6 +728,42 @@ Aqui vemos un poco fish, que nos permite autocompletar comandos anteriores, y al
 ![Paso107](images/ubuntu/38.png)
 
 
+Ahora configuraremos la Red LAN, anteriormente he explicado como se crea una red virtual en QEMU por lo que no repito pasos, aqui vemos como la red **red-linux** esta creada y la estoy añadiendiendo como red LAN
+![Paso110](images/ubuntu/41.png)
+
+Mi red se llama diferente dedbido a los drivers que usa la maquina virtual, al ser diferentes a los de VMware se llaman diferentes, mi red LAN es **enp7s0**
+
+![Paso111](images/ubuntu/42.png)
+
+Pulsamos en el engranaje para abrir la configuracion, y le cambiamos el nombre y pones la direccion de red como manual y con la siguiente IP **192.168.20.1**
+
+![Paso112](images/ubuntu/43.png)
+![Paso113](images/ubuntu/45.png)
+
+Y ahora le cambiamos el nombre a la NAT 
+
+![Paso114](images/ubuntu/44.png)
+
+Ahora instalamos las net-tools que son necesarias para usar el comando ```ifconfig``` 
+![Paso115](images/ubuntu/46.png)
+![Paso115.1](images/ubuntu/47.png)
+
+## Clonacion de la maquina virtual Ubuntu Servidor para hacer un cliente 
+
+Seleccionamos la maquina virtual que queremos clonar y le hacemos clic derecho, pulsamos en el boton clonar 
+![Paso116](images/ubuntu/48.png)
+
+Se nos abrira la siguiente ventana, solo hay un disco duro por lo que usamos ese 
+![Paso117](images/ubuntu/49.png)
+
+Iniciara la clonacion y al final veremos como se ha clonado 
+![Paso118](images/ubuntu/50.png)
+![Paso119](images/ubuntu/51.png)
+
+
+
+
+
 
 
 

@@ -68,3 +68,4 @@ Establece las politicas y valores predeterminados de inicio de sesion, se pueden
 Aqui se indica el directorio por defecto de los usuarios 
 
 
+# Permisos 
