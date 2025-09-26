@@ -772,6 +772,9 @@ Ahora editaremos las tarjetas de red del cliente, les cambiamos el nombre tanto 
 ![Paso123](images/ubuntu/53.png)
 ![Paso124](images/ubuntu/54.png)
 
+Para diferenciar el cliente del servidor he tomado una decision inteligente instalar la extension **Dash to dock** para mover la barra de tareas a la parte inferior de la pantall asi sabre donde estoy
+
+![Paso125](images/ubuntu/55.png)
 
 
 
