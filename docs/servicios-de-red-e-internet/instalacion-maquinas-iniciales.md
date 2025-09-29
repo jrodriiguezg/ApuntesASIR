@@ -288,7 +288,8 @@ Se nos abrirá la siguiente ventana, establecemos el nombre, el tipo de instant�
 ![Crear2](images/Wserver/66.png)
 
 ## Instalación de Active Directory en el Windows Server y configuración
-(Este paso requiere del cliente instalado y configurado, que esta mas abajo pero quedaba mejor meterlo en la categoria de Windows Server). [Instalacion Cliente Windows](https://apuntesasir.readthedocs.io/es/latest/servicios-de-red-e-internet/instalacion-maquinas-iniciales.html#instalacion-windows-10)
+(Este paso requiere del cliente instalado y configurado, que esta mas abajo pero quedaba mejor meterlo en la categoria de Windows Server). [Instalacion Cliente Windows](https://apuntesasir.readthedocs.io/es/latest/servicios-de-red-e-internet/instalacion-maquinas-iniciales.html#instalacion-windows-10).
+
 Para instalar el Active Directory (controlador de dominio) en Windows Server, nos vamos al administrador del servidor > Administrar > Instalar roles y características.
 
 ![Paso38](images/Wserver/68.png)
