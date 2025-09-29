@@ -1,5 +1,5 @@
 # Instalación Windows Server 2022 
-Yo voy a usar Libvirt en vez de VMware, ya que en Fedora Silverblue, que es lo que uso, no se puede instalar otra cosa. Debido a que es un sistema inmutable y las opciones de virtualizacion solo son o QEMU/KVM o podman/docker 
+Yo voy a usar Libvirt en vez de VMware, ya que en Fedora Silverblue, que es lo que uso, no se puede instalar otra cosa. Debido a que es un sistema inmutable y las opciones de virtualización solo son o QEMU/KVM o podman/docker 
 
 Esta primera captura muestra la pantalla inicial de Libvirt (que es una interfaz gráfica para QEMU/KVM). En la esquina superior izquierda está el botón para crear una máquina virtual.
 
@@ -28,7 +28,7 @@ Aquí finalmente vemos cómo quedaría nuestra instalación, con un resumen de t
 
 ![InstalacionFinal](images/Wserver/7.png)
 
-Ahora iniciara el instalador de Windows Server
+Ahora iniciará el instalador de Windows Server
 
 ![WindowsIniciando](images/Wserver/8.png)
 
@@ -86,7 +86,7 @@ Nos saltará el aviso de la red local. Pulsamos en **Sí**.
 
 ## Activación de usuario administrador
 Nos vamos al lanzador de programas de Windows y buscamos el simbolo del sistema (CMD), pulsamos click derecho y lo abrimos como administrador
-
+ 
 ![CMD](images/Wserver/23.png)
 
 Ahora escribimos el siguiente comando ```net user administrador /active:yes``` y pulsamos Intro.
@@ -105,10 +105,10 @@ Se nos abrirá el panel de directivas de seguridad local. Aquí debemos buscar e
 
 ![Administrador_habilitado](images/Wserver/29.png)
 
-## Instalacion de las Spice Tools (Guest Additinos de Libvirt)
+## Instalación de las Spice Tools (Guest Additions de Libvirt)
 
-Al igual que en virtualbox o vmware que se instalan los extras en la maquina virtualizada para agregar soporte de graficos, o arrastrar y soltar entre otros en libvirt tambien se instalan estas aunque no es tan simple como en las dos primeras opciones que es pulsar un boton 
-En el caso de libvirt debemos irnos a la pagina de descarga de las [SpiceTools](https://www.spice-space.org/download.html)
+Al igual que en VirtualBox o VMware que se instalan los extras en la máquina virtualizada para agregar soporte de gráficos, o arrastrar y soltar entre otros, en Libvirt también se instalan estas, aunque no es tan simple como en las dos primeras opciones que es pulsar un botón. 
+En el caso de Libvirt debemos irnos a la página de descarga de las [SpiceTools](https://www.spice-space.org/download.html)
 
 En la página hay descargas para diferentes sistemas operativos. Para Windows hay que buscar la opción que diga **Windows Binaries** y pulsar el primer enlace.
 
@@ -149,26 +149,26 @@ Después debemos marcar la casilla que dice **Usar siempre el modo de navegació
 
 ![historial2](images/Wserver/39.png)
 
-## Configuracion contraseñas y nombre del equipo 
+## Configuración de contraseñas y nombre del equipo 
 
-Ahora vamos a desabilitar las contraseñas seguras y el tiempo que tardan en expirar en el sistema 
+Ahora vamos a deshabilitar las contraseñas seguras y el tiempo que tardan en expirar en el sistema. 
 
-Para cambiar estos ajustes nos vamos al Panel de administracion del servidor > Herramientas > Directivas de Seguridad Local
+Para cambiar estos ajustes nos vamos al Panel de administración del servidor > Herramientas > Directivas de Seguridad Local.
 ![directivasseguridad](images/Wserver/4142.png)
 
-Una vez dentro de **Directivas de seguridad local**, nos desplazamos a Directiva de cuenta > Directiva de contraseña y pulsamos en **La contraseña debe cumplir los requisitos de complejidad**
+Una vez dentro de **Directivas de seguridad local**, nos desplazamos a Directiva de cuenta > Directiva de contraseña y pulsamos en **La contraseña debe cumplir los requisitos de complejidad**.
 
 ![directivasseguridad_ventana](images/Wserver/41.png)
 
-Y ahora pulsamos en deshabilitado, despues en aplicar o aceptar. 
+Y ahora pulsamos en deshabilitado, después en aplicar o aceptar. 
 
 ![Deshabilitar](images/Wserver/42.png)
 
-Ahora cambiaremos la vigencia maxima de la contraseña de 45 dias a 300 
+Ahora cambiaremos la vigencia máxima de la contraseña de 45 días a 300. 
 
 ![300](images/Wserver/43.png)
 
-Al final debe quedar asi
+Al final debe quedar así.
 
 ![Final](images/Wserver/44.png)
 
@@ -176,12 +176,12 @@ Ahora vamos a cambiar el periodo de actualizacion del servidor de 10 minutos a 1
 Despues pulsamos **Agregar**
 
 ![Final](images/Wserver/45.png)
-
+ 
 Ahora cambiaremos el nombre del equipo, para ello nos desplazamos a Administrador de archivos > Este equipo > Click derecho, propiedades > y bajamos hasta ver la opcion de **Cambiar nombre del equipo**
 
 ![NombreEquipo](images/Wserver/46.png)
 
-Al pulsar en **Cambiar nombre de equipo** se nos abre la siguiente ventana en la que introduciremos **SERVIDORW25XX**, despues pulsamos siguiente y **reiniciar mas tarde**
+Al pulsar en **Cambiar nombre de equipo** se nos abre la siguiente ventana en la que introduciremos **SERVIDORW25XX**, después pulsamos siguiente y **reiniciar más tarde**.
 
 ![NombreEquipo](images/Wserver/47.png)
 ![Reinicio](images/Wserver/48.png)
@@ -273,416 +273,416 @@ Y establecemos la contraseña
 
 Despues reiniciamos 
 
-## Creacion de una snapshoot 
+## Creación de una snapshot
 
-Ahora vamos a crear la snapshoot de la maquina cero, con lo basico ya creado, como forma de copia de seguridad por si algo sale mal, para ello en libvirt pulsamos vista > Instantaneas 
+Ahora vamos a crear la snapshot de la máquina cero, con lo básico ya creado, como forma de copia de seguridad por si algo sale mal; para ello en Libvirt pulsamos Vista > Instantáneas.
 
 ![Instantanea](images/Wserver/64.png)
 
-Abrimos el gestor de instantaneas y pulsamos en el **+** de la parte inferior 
+Abrimos el gestor de instantáneas y pulsamos en el **+** de la parte inferior.
 
 ![Crear](images/Wserver/65.png)
 
-Se nos abrira la siguiente ventana, establecemos el nombre el tipo de instantanea y la descripcion 
+Se nos abrirá la siguiente ventana, establecemos el nombre, el tipo de instantánea y la descripción.
 
 ![Crear2](images/Wserver/66.png)
 
 
 # Instalacion Windows 10
-En clase se ha visto como hacer lo que se conoce como instalacion desatendida una opcion que esta en VirtualBox o Vmware pero en Libvirt no existe, por lo que yo he documentado una instalacion normal de Windows 10 
+En clase se ha visto cómo hacer lo que se conoce como instalación desatendida, una opción que está en VirtualBox o VMware, pero en Libvirt no existe, por lo que yo he documentado una instalación normal de Windows 10.
 
-Seleccionamos medio de instalacion local y pulsamos adelante
+Seleccionamos medio de instalación local y pulsamos adelante.
 
 ![Paso1](images/w10/1.png)
 
-Seleccionamos el archivo ISO, para ello pulsamos en Explorar 
+Seleccionamos el archivo ISO; para ello pulsamos en Explorar.
 
 ![Paso2](images/w10/2.png)
 
-Despues pulsamos en explorar localmente y buscamos nuestra imagen .iso 
+Después pulsamos en explorar localmente y buscamos nuestra imagen .iso.
 
 ![Paso3](images/w10/3.png)
 ![Paso4](images/w10/4.png)
 
-Despues pulsamos siguiente 
+Después pulsamos siguiente.
 
 ![Paso5](images/w10/5.png)
 
-Ahora establecemos la cantidad de RAM y el numero de CPUs a usar, lo he dejado por defecto y pulsamos adelante
+Ahora establecemos la cantidad de RAM y el número de CPUs a usar, lo he dejado por defecto y pulsamos adelante.
 
 ![Paso6](images/w10/6.png)
 
-Ahora definimos el tamaño del disco duro, por defecto lo da en 20Gb lo he subido a 60Gb 
+Ahora definimos el tamaño del disco duro; por defecto lo da en 20 GB, lo he subido a 60 GB.
 
 ![Paso7](images/w10/7.png)
 
-En este ultimo paso definiremos el nombre de la maquina virtual , y podremos ver un resumen simplificado de nuestra maquina virtual, pulsamos en finalizar
+En este último paso definiremos el nombre de la máquina virtual y podremos ver un resumen simplificado de nuestra máquina virtual; pulsamos en finalizar.
 
 ![Paso8](images/w10/8.png)
 
-Ahora comenzara la instalacion de Windows 10 (he saltado pasos por que es muy parecida a windows server, como las preguntas de recoleccion de datos, que he pulsado **No** en todo)
+Ahora comenzará la instalación de Windows 10 (he saltado pasos porque es muy parecida a Windows Server, como las preguntas de recolección de datos, que he pulsado **No** en todo).
 
 ![Paso9](images/w10/9.png)
 
-Pulsamos **Instalar ahora** para instalar Windows 10 
+Pulsamos **Instalar ahora** para instalar Windows 10.
 
 ![Paso10](images/w10/10.png)
 
-En el siguiente paso nos pedira clave del producto, no tengo clave entonces pulso en **No tengo clave de producto**
+En el siguiente paso nos pedirá clave del producto; no tengo clave, entonces pulso en **No tengo clave de producto**.
 
 ![Paso11](images/w10/11.png)
 
-Ahora nos pedira la version de Windows, nos desplazamos en la lista y seleccionamos **Windows 10 Pro** y pulsamos siguiente
+Ahora nos pedirá la versión de Windows, nos desplazamos en la lista y seleccionamos **Windows 10 Pro** y pulsamos siguiente.
 
 ![Paso12](images/w10/12.png)
 
-En el siguiente paso seleccionamos la segunda opcion **Instalar solo windows (avanzado)**
+En el siguiente paso seleccionamos la segunda opción **Instalar solo Windows (avanzado)**.
 
 ![Paso13](images/w10/13.png)
 
-Ahora nos pasara al particionado del disco, donde seleccionaremos el disco que tenemos, y pulsaremos en **Nuevo**, nos pedira el espacio del disco, cogemos todos y pulsamos en **Aplicar**
+Ahora nos pasará al particionado del disco, donde seleccionaremos el disco que tenemos, y pulsaremos en **Nuevo**; nos pedirá el espacio del disco, cogemos todo y pulsamos en **Aplicar**.
 
 ![Paso14](images/w10/14.png)
 
-El particionado se deberia ver algo asi 
+El particionado se debería ver algo así.
 
 ![Paso15](images/w10/15.png)
 
-Pulsamos siguiente y comenzara la instalacion 
+Pulsamos siguiente y comenzará la instalación.
 
 ![Paso16](images/w10/16.png)
 
- Al acabar Windows se reiniciara, y empezara la configuracion inicial del sistema, los primeros pasos son seleccion de idioma, distribucion de teclado... 
+ Al acabar, Windows se reiniciará y empezará la configuración inicial del sistema; los primeros pasos son selección de idioma, distribución de teclado...
 
  ![Paso17](images/w10/17.png)
 
- Despues de un par de pasos molestos, nos perdira el nombre de la cuenta, le he puesto **Usuario**
+ Después de un par de pasos molestos, nos pedirá el nombre de la cuenta, le he puesto **Usuario**.
 
  ![Paso18](images/w10/18.png)
 
- De contraseña no le he puesto ninguna 
+ De contraseña no le he puesto ninguna.
 
  ![Paso19](images/w10/19.png)
 
-Ahora nos empezaran a saltar las opciones de privacidad y cortana, pulsamos **NO** en todo
+Ahora nos empezarán a saltar las opciones de privacidad y Cortana, pulsamos **NO** en todo.
 
 ![Paso20](images/w10/20.png)
 
-Despues de un rato se instalara 
+Después de un rato se instalará.
 
 ![Paso21](images/w10/22.png)
 
-## Activacion de Windows y cuenta de administrador 
-Ahora vamos a activar windows mediante el CMD, para ello nos vamos al buscador de programas de windows, escribimos CMD y pulsamos clic derecho **Ejecutar como administrador**
+## Activación de Windows y cuenta de administrador 
+Ahora vamos a activar Windows mediante el CMD; para ello nos vamos al buscador de programas de Windows, escribimos CMD y pulsamos clic derecho **Ejecutar como administrador**.
 
 ![Paso23](images/w10/23.png)
 
-Introducimos el siguiente comando ```SLMGR /IPK 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y``` y pulsamos enter y luego **Aceptar**
+Introducimos el siguiente comando ```SLMGR /IPK 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y``` y pulsamos Intro y luego **Aceptar**.
 
 ![Paso24](images/w10/24.png)
 
-Ahora ponemos el siguiente comando ```SLMGR /SKMS KMS.DIGIBOY.IR ``` pulsamos enter y aceptar 
+Ahora ponemos el siguiente comando ```SLMGR /SKMS KMS.DIGIBOY.IR ```, pulsamos Intro y Aceptar.
 
 ![Paso25](images/w10/25.png)
 
-Para finalizar ponemos el siguiente comando ```SLMGR /ATO ``` pulsamos enter y aceptar 
+Para finalizar ponemos el siguiente comando ```SLMGR /ATO ```, pulsamos Intro y Aceptar.
 
 ![Paso26](images/w10/26.png)
 
-Ahora activaremos la cuenta de Administrador, para ello escribimos ```NET USER ADMINISTRADOR /ACTIVE:YES ``` 
+Ahora activaremos la cuenta de Administrador; para ello escribimos ```NET USER ADMINISTRADOR /ACTIVE:YES ```.
 
 ![Paso27](images/w10/27.png)
 
-Desde las directivas de seguridad local, podemos ver que la cuenta de administrador esta activada: 
+Desde las directivas de seguridad local, podemos ver que la cuenta de administrador está activada:
 
 ![Paso28](images/w10/28.png)
 
-## Instalacion de la red Virtual 
-Como ya esta creada de la instalacion de Windows Server no es neecsario crearla de nuevo, los pasos son los mismos que anteriormente, añadimos un nuevo dispositivo hardware > elegimos tarjeta de red y en el tipo de red elegimos **red virtual windows**
+## Instalación de la red Virtual 
+Como ya está creada de la instalación de Windows Server no es necesario crearla de nuevo, los pasos son los mismos que anteriormente: añadimos un nuevo dispositivo hardware > elegimos tarjeta de red y en el tipo de red elegimos **red virtual windows**.
 
 ![Paso29](images/w10/29.png)
 
-Aqui vemos que tenemos dos tarjetas de red
+Aquí vemos que tenemos dos tarjetas de red.
 
 ![Paso30](images/w10/30.png)
 
-## Instalacion de las SPICE Guest Tools y el navegador
-Los pasos son los mismso que la instalacion anterior, nos las descargamos desde este [enlace](https://www.spice-space.org/download.html) y las instalamos 
+## Instalación de las SPICE Guest Tools y el navegador
+Los pasos son los mismos que en la instalación anterior, nos las descargamos desde este [enlace](https://www.spice-space.org/download.html) y las instalamos.
 
 ![Paso31](images/w10/31.png)
 
-Ahora instalaremos el navegador web, yo usare firefox, en mi caso tengo el ejecutable en mi equipo anfitrion y al instalar las Guest Tools lo paso con el arrastrar y soltar
+Ahora instalaremos el navegador web, yo usaré Firefox; en mi caso tengo el ejecutable en mi equipo anfitrión y al instalar las Guest Tools lo paso con el arrastrar y soltar.
 
 ![Paso32](images/w10/32.png)
 
-## Cambio del nombre del equipo
-Para cambiar el nombre del equipos, nos vamos al administrador de archivos y en **Mi equipo** hacemos clic derecho > Propiedades, se nos abrira esta ventana 
-Pulsaremos en **Cambiar configuracion**
+## Cambio del nombre del equipo 
+Para cambiar el nombre del equipo, nos vamos al administrador de archivos y en **Mi equipo** hacemos clic derecho > Propiedades, se nos abrirá esta ventana. 
+Pulsaremos en **Cambiar configuración**.
 
 ![Paso33](images/w10/33.png)
 
-Despues pulsamos en **Cambiar** y donde pone nombre del equipo, ponemos el nuevo nombre, despues pulsamos en **Aceptar**
+Después pulsamos en **Cambiar** y donde pone nombre del equipo, ponemos el nuevo nombre, después pulsamos en **Aceptar**.
 
 ![Paso34](images/w10/34.png)
 
-## Configuracion de la red
-Cambiamos el nombre de las tarjetas de red para reconocerlas mas facilmente como se ve en la imagen y en la tarjeta de red NAT, le pulsamos clic derecho > Propiedades > **Protocolo de internet version 4**, dejamos todo tal cual esta 
-Hacemos los mismos pasos en la red LAN, pero ahora estableceremos la direccion IP de manera manual, en este caso este cliente tendra la direccion **192.168.10.10**
-Al acabar pulsamos en **Aceptar**
+## Configuración de la red
+Cambiamos el nombre de las tarjetas de red para reconocerlas más fácilmente como se ve en la imagen y en la tarjeta de red NAT, le pulsamos clic derecho > Propiedades > **Protocolo de internet versión 4**, dejamos todo tal cual está. 
+Hacemos los mismos pasos en la red LAN, pero ahora estableceremos la dirección IP de manera manual; en este caso este cliente tendrá la dirección **192.168.10.10**.
+Al acabar pulsamos en **Aceptar**.
 
 ![Paso35_1](images/w10/35.png)
 
 ![Paso35](images/w10/36.png)
 
-## Desactivacion de las actualizaciones firewall y establecer contraseña al administrador 
-Para desactivar las actualziaciones, nos vamos a configuracion > Actualizaciones y serguridad > Opciones avanzadas y desactivamos todas las opciones 
+## Desactivación de las actualizaciones, firewall y establecer contraseña al administrador 
+Para desactivar las actualizaciones, nos vamos a Configuración > Actualizaciones y seguridad > Opciones avanzadas y desactivamos todas las opciones.
 
 ![Paso36](images/w10/37.png)
 
-Para desactivar el firewall seguimos los mismo pasos que en Windows server 
+Para desactivar el firewall seguimos los mismos pasos que en Windows Server.
 
 ![Paso37](images/w10/38.png)
 
-Para establecer la contraseña al administrador seguimos los mismos pasos que en windows server 
+Para establecer la contraseña al administrador seguimos los mismos pasos que en Windows Server.
 
 ![Contraseña](images/w10/40.png)
 
-## Comprobacion del funcionamiento de la red LAN entre maquinas 
+## Comprobación del funcionamiento de la red LAN entre máquinas 
 Mediante el uso de la herramienta ping, hacemos ping del servidor al cliente y del cliente al servidor 
 
 Esta primera captura muestra el ping desde el cliente hacia el servidor (192.168.10.1)
 
 ![Ping_desdeCliente](images/w10/39_desdeCliente.png)
 
-Esta siguiente captura muestra el ping del servidor al cliente (192.168.10.10)
+Esta siguiente captura muestra el ping del servidor al cliente (192.168.10.10).
 
 ![Ping_desdeServidor](images/w10/39_desdeServidor.png)
 
-## Instalacion de Active directory en el Windows Server y configuracion
-Para instalar el Active directory (controlador de dominio) en windows server, nos vamos al administrador del servidor > Administrar > Instalar Roles y caracteristicas 
+## Instalación de Active Directory en el Windows Server y configuración
+Para instalar el Active Directory (controlador de dominio) en Windows Server, nos vamos al administrador del servidor > Administrar > Instalar roles y características.
 
 ![Paso38](images/Wserver/68.png)
 
-Se nos abre esta ventana con un resumen de lo que se va a hacer, pulsamos **Siguiente**
+Se nos abre esta ventana con un resumen de lo que se va a hacer, pulsamos **Siguiente**.
 
 ![Paso39](images/Wserver/69.png)
 
-Seleccionamos **Instalacion basada en roles y caracteristicas** y pulsamos siguiente 
+Seleccionamos **Instalación basada en roles y características** y pulsamos **Siguiente**.
 
 ![Paso40](images/Wserver/70.png)
 
-Seleccionamos el servidor de destino de la instalacion, solo hay uno por lo que no hay problemas y pulsamos siguiente 
+Seleccionamos el servidor de destino de la instalación, solo hay uno por lo que no hay problemas y pulsamos **Siguiente**.
 
 ![Paso41](images/Wserver/71.png)
 
-Ahora en la lista debemos buscar los **Servicios de dominio de active directory** los pulsamos
+Ahora en la lista debemos buscar los **Servicios de dominio de Active Directory**, los pulsamos.
 
 ![Paso42](images/Wserver/72.png)
 ![Paso43](images/Wserver/73.png)
 ![Paso44](images/Wserver/74.png)
 
-En la siguiente opcion nos habla de las caracteristicas, lo dejamos por defecto y pulsamos **Siguiente**
+En la siguiente opción nos habla de las características, lo dejamos por defecto y pulsamos **Siguiente**.
 
 ![Paso45](images/Wserver/75.png)
 
-Con la opcion de azure saltamos, pulsando **siguiente**
+Con la opción de Azure saltamos, pulsando **Siguiente**.
 
 ![Paso46](images/Wserver/76.png)
 
-Ahora pulsaremos en **Instalar**
+Ahora pulsaremos en **Instalar**.
 
 ![Paso47](images/Wserver/77.png)
 ![Paso48](images/Wserver/78.png)
-
-Nos saltara el aviso de promocionar el equipo a **Controlador de dominio**, le pulsamos 
+ 
+Nos saltará el aviso de promocionar el equipo a **Controlador de dominio**, le pulsamos.
 
 ![Paso49](images/Wserver/79.png)
 
-Se nos abrira una ventana nueva, marcamos la casilla de **agregar un nuevo bosque**, nos pedira que especifiquemos el nombre del dominio raiz, importante poner el final del dominio es decir **.es**, **.edu**, etc. Si no nos saldra el error que vemos en la imagen en rojo.
+Se nos abrirá una ventana nueva, marcamos la casilla de **agregar un nuevo bosque**, nos pedirá que especifiquemos el nombre del dominio raíz, importante poner el final del dominio, es decir **.es**, **.edu**, etc. Si no, nos saldrá el error que vemos en la imagen en rojo.
 
 ![Paso50](images/Wserver/80.png)
 
-En la imagen siguiente vemos como al poner el dominio **dominiow25jrrg.edu** ya nos permite continuar 
+En la imagen siguiente vemos cómo al poner el dominio **dominiow25jrrg.edu** ya nos permite continuar.
 
 ![Paso51](images/Wserver/81.png)
 
-En el siguiente paso, el nivel funcional lo dejamos por defecto y la contraseña le ponemos **Administardor1** y pulsamos siguiente 
+En el siguiente paso, el nivel funcional lo dejamos por defecto, la contraseña le ponemos **Administrador1** y pulsamos **Siguiente**.
 
 ![Paso52](images/Wserver/82.png)
 
-Ahora nos preguntara si queremos crear una delegacion DNS, no marcamos nada y pulsamos **Siguiente**
+Ahora nos preguntará si queremos crear una delegación DNS, no marcamos nada y pulsamos **Siguiente**.
 
 ![Paso53](images/Wserver/83.png)
 
-El nombre de NetBIOS no lo rellena de manera autoamtica, por lo que solo debemos pulsar **Siguiente**
+El nombre de NetBIOS lo rellena de manera automática, por lo que solo debemos pulsar **Siguiente**.
 
 ![Paso54](images/Wserver/84.png)
 
-Y las rutas de los archivos dejamos las por defecto, pulsamos **Siguiente**
+Y las rutas de los archivos las dejamos por defecto, pulsamos **Siguiente**.
 
 ![Paso55](images/Wserver/85.png)
 
-Ahora nos mostrara las configuraciones que se van a hacer, pulsamos **Siguiente**
+Ahora nos mostrará las configuraciones que se van a hacer, pulsamos **Siguiente**.
 
 ![Pas56](images/Wserver/86.png)
 
-Para finalizar, si todo ha salido bien, nos aparecera arriba el aviso (los avisos en amarillo son solo advertencias).
+Para finalizar, si todo ha salido bien, nos aparecerá arriba el aviso (los avisos en amarillo son solo advertencias).
 
 ![Paso57](images/Wserver/87.png)
 
-El servidor se reiniciara para completar la instalacion 
+El servidor se reiniciará para completar la instalación.
 
 ![Paso58](images/Wserver/88.png)
 
-Y al volver a arrancar veremos como el inicio de sesion ha cambiado 
+Y al volver a arrancar veremos cómo el inicio de sesión ha cambiado.
 
 ![Paso59](images/Wserver/89.png)
 
-Ahora en el servidor quitaremos el firewall 
+Ahora en el servidor quitaremos el firewall.
 
 ![Paso60](images/Wserver/92antesde91.png)
 
-Y en el cliente pondremos la direccion del servidor como DNS primario, 
+Y en el cliente pondremos la dirección del servidor como DNS primario.
 
 ![Paso61](images/Wserver/91.png)
 
-Ahora vamos a unir el cliente al dominio, para ello nos vamos al mismo sitio en el que cambiamos el nombre del equipo, pero esta vez, nos vamos a la seccion de **Miembro de** y seleccionamos **Dominio** despues pulsamos **Aceptar**
+Ahora vamos a unir el cliente al dominio, para ello nos vamos al mismo sitio en el que cambiamos el nombre del equipo, pero esta vez, nos vamos a la sección de **Miembro de** y seleccionamos **Dominio**, después pulsamos **Aceptar**.
 
 ![Paso62](images/Wserver/93.png)
 
-Nos pedira las contraseñas del usuario Administrador del servidor 
+Nos pedirá las contraseñas del usuario Administrador del servidor.
 
 ![Paso63](images/Wserver/94.png)
 
-Despues nos avisara que el cliente se ha unido al dominio correctamente y reiniciamos
+Después nos avisará de que el cliente se ha unido al dominio correctamente y reiniciamos.
 
 ![Paso64](images/Wserver/95.png)
 
-Al reiniciar nos vamos a iniciar sesion con otro usuario, sabemos que estamos haciendolo bien, por que nos dice **Iniciar sesion en (y el nomrbe del cliente)**
+Al reiniciar nos vamos a iniciar sesión con otro usuario, sabemos que estamos haciéndolo bien, porque nos dice **Iniciar sesión en (y el nombre del cliente)**.
 
 ![Paso65](images/Wserver/96.png)
 
-Ahora en el servidor y desde el administardor del servidor, nos vamos a herramientas > **Usuarios y equipos de active directory**
+Ahora en el servidor y desde el administrador del servidor, nos vamos a Herramientas > **Usuarios y equipos de Active Directory**.
 
 ![Paso66](images/Wserver/97.png)
 
-Podemos ver que el cliente esta unido en el panel de **Usuarios y equipos de active directory**
+Podemos ver que el cliente está unido en el panel de **Usuarios y equipos de Active Directory**.
 
 ![Paso67](images/Wserver/98.png)
 
-El firewall se reactivara al reinciar, por lo que lo desactivamos, tanto en el cliente como en el servidor
+El firewall se reactivará al reiniciar, por lo que lo desactivamos, tanto en el cliente como en el servidor.
 
 ![Paso68](images/Wserver/99.png)
 ![Paso68](images/Wserver/100.png)
 
-En el cliente podemos verificar que se ha unido de manera correcta al dominio, desde el panel de Sistema y seguridad > Sistema 
+En el cliente podemos verificar que se ha unido de manera correcta al dominio, desde el panel de Sistema y seguridad > Sistema.
 
 ![Paso69](images/Wserver/101.png)
 
-Ahora deberemos desactivar la compelejidad de la contraseña ya que a mi se me ha vuelto a activar, para ello nos vamos a Administrar > Administrador de directivas de grupo > Bosque > Dominios > nuestro dominio > **Default domain policy** y hacemos clic derecho > editar, se nos abrira el **Editor de administracion de directivas de grupo** y nos vamos a Configuracion de equipo > Directivas > Configuracion de Windows > Directivas de cuenta > Directivas de contraseña y verificamos si el apartado de **La contraseña debe cumplir los requisitos de complejidad** esta en **desabilitada**
+Ahora deberemos desactivar la complejidad de la contraseña, ya que a mí se me ha vuelto a activar. Para ello nos vamos a Administrar > Administrador de directivas de grupo > Bosque > Dominios > nuestro dominio > **Default domain policy** y hacemos clic derecho > Editar. Se nos abrirá el **Editor de administración de directivas de grupo** y nos vamos a Configuración de equipo > Directivas > Configuración de Windows > Directivas de cuenta > Directivas de contraseña y verificamos si el apartado de **La contraseña debe cumplir los requisitos de complejidad** está en **Deshabilitada**.
 
 ![Paso70](images/Wserver/102.png)
 
-Ahora en **Servidor Local**, pulsamos en **Seguridad mejorada de IE** y desactivamos todo 
+Ahora en **Servidor Local**, pulsamos en **Seguridad mejorada de IE** y desactivamos todo.
 
 ![Paso71](images/Wserver/103.png)
 
 
-# Instalacion de Ubuntu 
-## Creacion de la maquina virtual
-Ahora vamos a instalar Ubuntu, no especifico si servidor o cliente ya que el mismo vale para ambos instalaremos uno y lo clonaremos, en clase se ha hecho una instalacion desetentidad pero yo no puedo hacerla 
+# Instalación de Ubuntu
+## Creación de la máquina virtual
+Ahora vamos a instalar Ubuntu, no especifico si servidor o cliente ya que el mismo vale para ambos; instalaremos uno y lo clonaremos. En clase se ha hecho una instalación desatendida, pero yo no puedo hacerla.
 
-Le damos a nueva maquina virtual, **medio de instalacion local** y adelante
+Le damos a nueva máquina virtual, **medio de instalación local** y adelante.
 ![Paso72](images/ubuntu/1.png)
 
-Seleccinamos la ISO y pulsamos adelante 
+Seleccionamos la ISO y pulsamos adelante.
 
 ![Paso73](images/ubuntu/2.png)
 
-En la configuracion de RAM y CPU, lo dejamos por defecto 
+En la configuración de RAM y CPU, lo dejamos por defecto.
 
 ![Paso74](images/ubuntu/3.png)
 
-El disco por defecto nos dice 20Gb yo lo he puesto en 60Gb y pulsamos adelante 
+El disco por defecto nos dice 20 GB, yo lo he puesto en 60 GB y pulsamos adelante.
 
 ![Paso75](images/ubuntu/4.png)
 
-He puesto cliente en el nombre pero este es el server, pero como son iguales no pasa nada, luego lo cambio 
+He puesto cliente en el nombre, pero este es el server; pero como son iguales no pasa nada, luego lo cambio.
 
 ![Paso76](images/ubuntu/5.png)
 
-## Instalacion de Ubuntu en la maquina virtual
+## Instalación de Ubuntu en la máquina virtual
 
-Se iniciara la maquina y nos pedira el idioma del instalador, con el teclado se selecciona **Español**
+Se iniciará la máquina y nos pedirá el idioma del instalador, con el teclado se selecciona **Español**.
 
 ![Paso77](images/ubuntu/6.png)
 
-En el selector del modo de instalacion, elegimos **Instalar ubuntu** 
+En el selector del modo de instalación, elegimos **Instalar Ubuntu**.
 
 ![Paso78](images/ubuntu/7.png)
 
-Se abrira el instalador y seleccionamos el idioma **Español** y pulsamos continuar 
+Se abrirá el instalador y seleccionamos el idioma **Español** y pulsamos continuar.
 
 ![Paso79](images/ubuntu/8.png)
 
-Ahora la disposicion de teclado dejamos por defecto y pulsamos continuar 
+Ahora la disposición de teclado la dejamos por defecto y pulsamos continuar.
 
 ![Paso80](images/ubuntu/9.png)
 
-Ahora en el tipo de instalacion, selecciono **Instalacion minima** para que menos cosas 
+Ahora en el tipo de instalación, selecciono **Instalación mínima** para que instale menos cosas.
 
 ![Paso81](images/ubuntu/10.png)
 
-No voy a hacer particionado por lo que elijo la primera opcion y que lo haga automatico 
+No voy a hacer particionado, por lo que elijo la primera opción y que lo haga automático.
 
 ![Paso82](images/ubuntu/11.png)
 
-En la ubicacion, lo dejo por defecto 
+En la ubicación, lo dejo por defecto.
 
 ![Paso83](images/ubuntu/12.png)
 
-Ahora configuramos lass opciones del usuario, me he equivocado en el nombre de usuario, he puesto administardor en vez de usuario, ahora si he puesto bien que esto es el servidor 
+Ahora configuramos las opciones del usuario, me he equivocado en el nombre de usuario, he puesto administrador en vez de usuario, ahora sí he puesto bien que esto es el servidor.
 
 ![Paso84](images/ubuntu/13.png)
 
-Ahora comenzara la instalacion y le dejamos su tiempo 
+Ahora comenzará la instalación y le dejamos su tiempo.
 
 ![Paso85](images/ubuntu/14.png)
 
-Al finalizar los avisara de que reiniciemos, le decimos que si 
+Al finalizar nos avisará de que reiniciemos, le decimos que sí.
 
 ![Paso86](images/ubuntu/15.png)
 
-Le he cambiado el nombre a la maquina 
+Le he cambiado el nombre a la máquina.
 
 ![Paso87](images/ubuntu/16.png)
 
-## Configuracion de Ubuntu
+## Configuración de Ubuntu
 
-Iniciamos la maquina 
+Iniciamos la máquina.
 
 ![Paso88](images/ubuntu/17.png)
 
-Ahora todas estas preguntas, vamos rapido con ellas, reportes de errores le decimos que no, livepatch que no tampoco y servicios de ubicacion, tampoco los queremos 
+Ahora todas estas preguntas, vamos rápido con ellas, reportes de errores le decimos que no, livepatch que no tampoco y servicios de ubicación, tampoco los queremos.
 
 ![Paso89](images/ubuntu/18.png)
 ![Paso90](images/ubuntu/19.png)
 ![Paso91](images/ubuntu/20.png)
 ![Paso92](images/ubuntu/21.png)
 
-Se iniciara el escritorio de ubuntu 
+Se iniciará el escritorio de Ubuntu.
 
 ![Paso93](images/ubuntu/22.png)
 
-Aprovechando el tiempo le he cambiado el nombre al usuario desde la configuracion 
+Aprovechando el tiempo le he cambiado el nombre al usuario desde la configuración.
 
 ![Paso94](images/ubuntu/23.png)
 
-Ahora cambiamos el inicio de sesion e iniciamos sesion con **Administrador**
+Ahora cambiamos el inicio de sesión e iniciamos sesión con **Administrador**.
 
 ![Paso95](images/ubuntu/24.png)
 
-Actualizaremos los repositorios y el sistema todo en una linea con el comando 
+Actualizaremos los repositorios y el sistema todo en una línea con el comando:
 ```bash 
 sudo apt update && sudo apt upgrade 
 ```
@@ -748,15 +748,15 @@ Ahora instalamos las net-tools que son necesarias para usar el comando ```ifconf
 ![Paso115](images/ubuntu/46.png)
 ![Paso115.1](images/ubuntu/47.png)
 
-## Clonacion de la maquina virtual Ubuntu Servidor para hacer un cliente 
+## Clonación de la máquina virtual Ubuntu Servidor para hacer un cliente 
 
-Seleccionamos la maquina virtual que queremos clonar y le hacemos clic derecho, pulsamos en el boton clonar 
+Seleccionamos la máquina virtual que queremos clonar y le hacemos clic derecho, pulsamos en el botón clonar. 
 ![Paso116](images/ubuntu/48.png)
 
-Se nos abrira la siguiente ventana, solo hay un disco duro por lo que usamos ese 
+Se nos abrirá la siguiente ventana, solo hay un disco duro por lo que usamos ese. 
 ![Paso117](images/ubuntu/49.png)
 
-Iniciara la clonacion y al final veremos como se ha clonado 
+Iniciará la clonación y al final veremos cómo se ha clonado. 
 ![Paso118](images/ubuntu/50.png)
 ![Paso119](images/ubuntu/51.png)
 
@@ -772,30 +772,21 @@ Ahora editaremos las tarjetas de red del cliente, les cambiamos el nombre tanto 
 ![Paso123](images/ubuntu/53.png)
 ![Paso124](images/ubuntu/54.png)
 
-Para diferenciar el cliente del servidor he tomado una decision inteligente instalar la extension **Dash to dock** para mover la barra de tareas a la parte inferior de la pantall asi sabre donde estoy
+Para diferenciar el cliente del servidor he tomado una decision inteligente instalar la extension **Dash to dock** en el cliente para mover la barra de tareas a la parte inferior de la pantall asi sabre donde estoy, aparte del fondo de pantalla diferente 
 
 ![Paso125](images/ubuntu/55.png)
 
 
+## Verificación de la conexión entre máquinas 
+Con las dos máquinas abiertas, haciendo uso de la red LAN, hacemos ping desde la máquina cliente al servidor (192.168.20.1), vemos que hace ping. 
 
+![Paso126](images/ubuntu/56.png)
 
+Y lo mismo del servidor al cliente (192.168.20.10).
 
+![Paso127](images/ubuntu/57.png)
 
+Para finalizar hacemos las snapshots de las máquinas, tanto cliente como servidor. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![Paso128](images/ubuntu/58.png)
+![Paso129](images/ubuntu/59.png)
