@@ -1,6 +1,5 @@
 # Instalación Windows Server 2022 
-Estos apuntes contienen imagenes mal ubicadas debido a un error de ReadTheDocs, esta pendiente de ser arreglado 
-[Github](https://github.com/jrodriiguezg/ApuntesASIR/issues/4)
+Estos apuntes contienen imagenes mal ubicadas debido a un error de ReadTheDocs, [Github](https://github.com/jrodriiguezg/ApuntesASIR/issues/4) aunque parezca arreglado en cualquier momento puede volver a ocurrir 
 
 Yo voy a usar Libvirt en vez de VMware, ya que en Fedora Silverblue, que es lo que uso, no se puede instalar otra cosa. Debido a que es un sistema inmutable y las opciones de virtualización solo son o QEMU/KVM o podman/docker 
 
