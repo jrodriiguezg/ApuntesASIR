@@ -287,6 +287,135 @@ Se nos abrirá la siguiente ventana, establecemos el nombre, el tipo de instant�
 
 ![Crear2](images/Wserver/66.png)
 
+## Instalación de Active Directory en el Windows Server y configuración
+(Este paso requiere del cliente instalado y configurado, que esta mas abajo pero quedaba mejor meterlo en la categoria de Windows Server). [Instalacion Cliente Windows](https://apuntesasir.readthedocs.io/es/latest/servicios-de-red-e-internet/instalacion-maquinas-iniciales.html#instalacion-windows-10)
+Para instalar el Active Directory (controlador de dominio) en Windows Server, nos vamos al administrador del servidor > Administrar > Instalar roles y características.
+
+![Paso38](images/Wserver/68.png)
+
+Se nos abre esta ventana con un resumen de lo que se va a hacer, pulsamos **Siguiente**.
+
+![Paso39](images/Wserver/69.png)
+
+Seleccionamos **Instalación basada en roles y características** y pulsamos **Siguiente**.
+
+![Paso40](images/Wserver/70.png)
+
+Seleccionamos el servidor de destino de la instalación, solo hay uno por lo que no hay problemas y pulsamos **Siguiente**.
+
+![Paso41](images/Wserver/71.png)
+
+Ahora en la lista debemos buscar los **Servicios de dominio de Active Directory**, los pulsamos.
+
+![Paso42](images/Wserver/72.png)
+![Paso43](images/Wserver/73.png)
+![Paso44](images/Wserver/74.png)
+
+En la siguiente opción nos habla de las características, lo dejamos por defecto y pulsamos **Siguiente**.
+
+![Paso45](images/Wserver/75.png)
+
+Con la opción de Azure saltamos, pulsando **Siguiente**.
+
+![Paso46](images/Wserver/76.png)
+
+Ahora pulsaremos en **Instalar**.
+
+![Paso47](images/Wserver/77.png)
+![Paso48](images/Wserver/78.png)
+ 
+Nos saltará el aviso de promocionar el equipo a **Controlador de dominio**, le pulsamos.
+
+![Paso49](images/Wserver/79.png)
+
+Se nos abrirá una ventana nueva, marcamos la casilla de **agregar un nuevo bosque**, nos pedirá que especifiquemos el nombre del dominio raíz, importante poner el final del dominio, es decir **.es**, **.edu**, etc. Si no, nos saldrá el error que vemos en la imagen en rojo.
+
+![Paso50](images/Wserver/80.png)
+
+En la imagen siguiente vemos cómo al poner el dominio **dominiow25jrrg.edu** ya nos permite continuar.
+
+![Paso51](images/Wserver/81.png)
+
+En el siguiente paso, el nivel funcional lo dejamos por defecto, la contraseña le ponemos **Administrador1** y pulsamos **Siguiente**.
+
+![Paso52](images/Wserver/82.png)
+
+Ahora nos preguntará si queremos crear una delegación DNS, no marcamos nada y pulsamos **Siguiente**.
+
+![Paso53](images/Wserver/83.png)
+
+El nombre de NetBIOS lo rellena de manera automática, por lo que solo debemos pulsar **Siguiente**.
+
+![Paso54](images/Wserver/84.png)
+
+Y las rutas de los archivos las dejamos por defecto, pulsamos **Siguiente**.
+
+![Paso55](images/Wserver/85.png)
+
+Ahora nos mostrará las configuraciones que se van a hacer, pulsamos **Siguiente**.
+
+![Pas56](images/Wserver/86.png)
+
+Para finalizar, si todo ha salido bien, nos aparecerá arriba el aviso (los avisos en amarillo son solo advertencias).
+
+![Paso57](images/Wserver/87.png)
+
+El servidor se reiniciará para completar la instalación.
+
+![Paso58](images/Wserver/88.png)
+
+Y al volver a arrancar veremos cómo el inicio de sesión ha cambiado.
+
+![Paso59](images/Wserver/89.png)
+
+Ahora en el servidor quitaremos el firewall.
+
+![Paso60](images/Wserver/92antesde91.png)
+
+Y en el cliente pondremos la dirección del servidor como DNS primario.
+
+![Paso61](images/Wserver/91.png)
+
+Ahora vamos a unir el cliente al dominio, para ello nos vamos al mismo sitio en el que cambiamos el nombre del equipo, pero esta vez, nos vamos a la sección de **Miembro de** y seleccionamos **Dominio**, después pulsamos **Aceptar**.
+
+![Paso62](images/Wserver/93.png)
+
+Nos pedirá las contraseñas del usuario Administrador del servidor.
+
+![Paso63](images/Wserver/94.png)
+
+Después nos avisará de que el cliente se ha unido al dominio correctamente y reiniciamos.
+
+![Paso64](images/Wserver/95.png)
+
+Al reiniciar nos vamos a iniciar sesión con otro usuario, sabemos que estamos haciéndolo bien, porque nos dice **Iniciar sesión en (y el nombre del cliente)**.
+
+![Paso65](images/Wserver/96.png)
+
+Ahora en el servidor y desde el administrador del servidor, nos vamos a Herramientas > **Usuarios y equipos de Active Directory**.
+
+![Paso66](images/Wserver/97.png)
+
+Podemos ver que el cliente está unido en el panel de **Usuarios y equipos de Active Directory**.
+
+![Paso67](images/Wserver/98.png)
+
+El firewall se reactivará al reiniciar, por lo que lo desactivamos, tanto en el cliente como en el servidor.
+
+![Paso68](images/Wserver/99.png)
+![Paso68](images/Wserver/100.png)
+
+En el cliente podemos verificar que se ha unido de manera correcta al dominio, desde el panel de Sistema y seguridad > Sistema.
+
+![Paso69](images/Wserver/101.png)
+
+Ahora deberemos desactivar la complejidad de la contraseña, ya que a mí se me ha vuelto a activar. Para ello nos vamos a Administrar > Administrador de directivas de grupo > Bosque > Dominios > nuestro dominio > **Default domain policy** y hacemos clic derecho > Editar. Se nos abrirá el **Editor de administración de directivas de grupo** y nos vamos a Configuración de equipo > Directivas > Configuración de Windows > Directivas de cuenta > Directivas de contraseña y verificamos si el apartado de **La contraseña debe cumplir los requisitos de complejidad** está en **Deshabilitada**.
+
+![Paso70](images/Wserver/102.png)
+
+Ahora en **Servidor Local**, pulsamos en **Seguridad mejorada de IE** y desactivamos todo.
+
+![Paso71](images/Wserver/103.png)
 
 # Instalacion Windows 10
 En clase se ha visto cómo hacer lo que se conoce como instalación desatendida, una opción que está en VirtualBox o VMware, pero en Libvirt no existe, por lo que yo he documentado una instalación normal de Windows 10.
@@ -457,136 +586,6 @@ Esta primera captura muestra el ping desde el cliente hacia el servidor (192.168
 Esta siguiente captura muestra el ping del servidor al cliente (192.168.10.10).
 
 ![Ping_desdeServidor](images/w10/39_desdeServidor.png)
-
-## Instalación de Active Directory en el Windows Server y configuración
-Para instalar el Active Directory (controlador de dominio) en Windows Server, nos vamos al administrador del servidor > Administrar > Instalar roles y características.
-
-![Paso38](images/Wserver/68.png)
-
-Se nos abre esta ventana con un resumen de lo que se va a hacer, pulsamos **Siguiente**.
-
-![Paso39](images/Wserver/69.png)
-
-Seleccionamos **Instalación basada en roles y características** y pulsamos **Siguiente**.
-
-![Paso40](images/Wserver/70.png)
-
-Seleccionamos el servidor de destino de la instalación, solo hay uno por lo que no hay problemas y pulsamos **Siguiente**.
-
-![Paso41](images/Wserver/71.png)
-
-Ahora en la lista debemos buscar los **Servicios de dominio de Active Directory**, los pulsamos.
-
-![Paso42](images/Wserver/72.png)
-![Paso43](images/Wserver/73.png)
-![Paso44](images/Wserver/74.png)
-
-En la siguiente opción nos habla de las características, lo dejamos por defecto y pulsamos **Siguiente**.
-
-![Paso45](images/Wserver/75.png)
-
-Con la opción de Azure saltamos, pulsando **Siguiente**.
-
-![Paso46](images/Wserver/76.png)
-
-Ahora pulsaremos en **Instalar**.
-
-![Paso47](images/Wserver/77.png)
-![Paso48](images/Wserver/78.png)
- 
-Nos saltará el aviso de promocionar el equipo a **Controlador de dominio**, le pulsamos.
-
-![Paso49](images/Wserver/79.png)
-
-Se nos abrirá una ventana nueva, marcamos la casilla de **agregar un nuevo bosque**, nos pedirá que especifiquemos el nombre del dominio raíz, importante poner el final del dominio, es decir **.es**, **.edu**, etc. Si no, nos saldrá el error que vemos en la imagen en rojo.
-
-![Paso50](images/Wserver/80.png)
-
-En la imagen siguiente vemos cómo al poner el dominio **dominiow25jrrg.edu** ya nos permite continuar.
-
-![Paso51](images/Wserver/81.png)
-
-En el siguiente paso, el nivel funcional lo dejamos por defecto, la contraseña le ponemos **Administrador1** y pulsamos **Siguiente**.
-
-![Paso52](images/Wserver/82.png)
-
-Ahora nos preguntará si queremos crear una delegación DNS, no marcamos nada y pulsamos **Siguiente**.
-
-![Paso53](images/Wserver/83.png)
-
-El nombre de NetBIOS lo rellena de manera automática, por lo que solo debemos pulsar **Siguiente**.
-
-![Paso54](images/Wserver/84.png)
-
-Y las rutas de los archivos las dejamos por defecto, pulsamos **Siguiente**.
-
-![Paso55](images/Wserver/85.png)
-
-Ahora nos mostrará las configuraciones que se van a hacer, pulsamos **Siguiente**.
-
-![Pas56](images/Wserver/86.png)
-
-Para finalizar, si todo ha salido bien, nos aparecerá arriba el aviso (los avisos en amarillo son solo advertencias).
-
-![Paso57](images/Wserver/87.png)
-
-El servidor se reiniciará para completar la instalación.
-
-![Paso58](images/Wserver/88.png)
-
-Y al volver a arrancar veremos cómo el inicio de sesión ha cambiado.
-
-![Paso59](images/Wserver/89.png)
-
-Ahora en el servidor quitaremos el firewall.
-
-![Paso60](images/Wserver/92antesde91.png)
-
-Y en el cliente pondremos la dirección del servidor como DNS primario.
-
-![Paso61](images/Wserver/91.png)
-
-Ahora vamos a unir el cliente al dominio, para ello nos vamos al mismo sitio en el que cambiamos el nombre del equipo, pero esta vez, nos vamos a la sección de **Miembro de** y seleccionamos **Dominio**, después pulsamos **Aceptar**.
-
-![Paso62](images/Wserver/93.png)
-
-Nos pedirá las contraseñas del usuario Administrador del servidor.
-
-![Paso63](images/Wserver/94.png)
-
-Después nos avisará de que el cliente se ha unido al dominio correctamente y reiniciamos.
-
-![Paso64](images/Wserver/95.png)
-
-Al reiniciar nos vamos a iniciar sesión con otro usuario, sabemos que estamos haciéndolo bien, porque nos dice **Iniciar sesión en (y el nombre del cliente)**.
-
-![Paso65](images/Wserver/96.png)
-
-Ahora en el servidor y desde el administrador del servidor, nos vamos a Herramientas > **Usuarios y equipos de Active Directory**.
-
-![Paso66](images/Wserver/97.png)
-
-Podemos ver que el cliente está unido en el panel de **Usuarios y equipos de Active Directory**.
-
-![Paso67](images/Wserver/98.png)
-
-El firewall se reactivará al reiniciar, por lo que lo desactivamos, tanto en el cliente como en el servidor.
-
-![Paso68](images/Wserver/99.png)
-![Paso68](images/Wserver/100.png)
-
-En el cliente podemos verificar que se ha unido de manera correcta al dominio, desde el panel de Sistema y seguridad > Sistema.
-
-![Paso69](images/Wserver/101.png)
-
-Ahora deberemos desactivar la complejidad de la contraseña, ya que a mí se me ha vuelto a activar. Para ello nos vamos a Administrar > Administrador de directivas de grupo > Bosque > Dominios > nuestro dominio > **Default domain policy** y hacemos clic derecho > Editar. Se nos abrirá el **Editor de administración de directivas de grupo** y nos vamos a Configuración de equipo > Directivas > Configuración de Windows > Directivas de cuenta > Directivas de contraseña y verificamos si el apartado de **La contraseña debe cumplir los requisitos de complejidad** está en **Deshabilitada**.
-
-![Paso70](images/Wserver/102.png)
-
-Ahora en **Servidor Local**, pulsamos en **Seguridad mejorada de IE** y desactivamos todo.
-
-![Paso71](images/Wserver/103.png)
-
 
 # Instalación de Ubuntu
 ## Creación de la máquina virtual
