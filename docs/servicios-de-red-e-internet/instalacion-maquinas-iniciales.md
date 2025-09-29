@@ -619,11 +619,11 @@ Se iniciará la máquina y nos pedirá el idioma del instalador, con el teclado 
 
 En el selector del modo de instalación, elegimos **Instalar Ubuntu**.
 
-![Paso78](images/ubuntu/7.png)
+![Paso78](images/ubuntu/7Ubuntu.png)
 
 Se abrirá el instalador y seleccionamos el idioma **Español** y pulsamos continuar.
 
-![Paso79](images/ubuntu/8.png)
+![Paso79](images/ubuntu/8Ubuntu.png)
 
 Ahora la disposición de teclado la dejamos por defecto y pulsamos continuar.
 
@@ -631,7 +631,7 @@ Ahora la disposición de teclado la dejamos por defecto y pulsamos continuar.
 
 Ahora en el tipo de instalación, selecciono **Instalación mínima** para que instale menos cosas.
 
-![Paso81](images/ubuntu/10.png)
+![Paso81](images/ubuntu/10Ubuntu.png)
 
 No voy a hacer particionado, por lo que elijo la primera opción y que lo haga automático.
 
