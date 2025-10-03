@@ -7,12 +7,8 @@ En los sistemas Linux todo se trata como un archivo, hasta los dispositivos. Est
 - **Dispositivos de bloques:** Transfieren datos en bloques de tamaño fijo, se usan en dispositivos de almacenamiento
 - **Dispositivos de red:** No tiene una representación en un archivo, ya que se gestionan a través de una pila de red separada. Su configuración e interfaces se pueden ver con comandos como ```ip a```
 
-<figure>
-  <img src="images/dev.png" alt="ls /dev">
-  <figcaption>
-    Imagen de creacion propia. | CC BY-NC-SA 4.0
-  </figcaption>
-</figure>
+![ls /dev](images/dev.png)
+
 
 ## 2. Particiones
 El particionado es el proceso de dividir un disco duro en secciones lógicas o particiones, cada una de ellas se ve por el sistema operativo como un disco independiente. Existen dos estándares principales para la gestión de particiones: 
@@ -31,12 +27,7 @@ Los discos en Linux se representan como un archivo en el directorio /dev, su nom
 - **Discos IDE:** Utilizan el prefijo ```/dev/hd```
 - **Discos NVME:** Utilizan el prefijo ```nvmeXn1``` donde la X es el número de disco, y sus particiones se definen como nvmeXn1pX donde la última X es el número de partición, EJ: ```nvme0n1``` su primera partición sería ```nvme0n1p1```
 
-<figure>
-  <img src="images/lsblk.png" alt="lsblk">
-  <figcaption>
-    Creacion Propia. | CC BY-NC-SA 4.0
-  </figcaption>
-</figure>
+![lsblk](images/lsblk.png)
 
 ### 2.2 Herramientas de particionado
 
@@ -86,12 +77,8 @@ El comando mount, nos permite montar particiones de manera temporal, en el siste
 - **/media:** En los sistemas modernos, este directorio es el punto de montaje predeterminado para dispositivos extraíbles como unidades USB
 - **/lost+found:** Cada sistema de archivos (partición) tiene su propio directorio lost+found. Es un lugar especial donde el programa de reparación de sistemas de archivos (fsck) coloca los fragmentos de archivos que se han perdido debido a una falla del sistema o un apagado inesperado. 
 
-<figure>
-  <img src="images/directorios.jpg" alt="directorios">
-  <figcaption>
-    Fuente: linuxhandbook.com
-  </figcaption>
-</figure>
+![Arbol de directorios](images/directorios.jpg)
+
 ## 5. Entorno de escritorio
 Un entorno de escritorio es un conjunto de programas que permiten interactuar con el sistema operativo de manera visual, ofreciendonos la opcion de gestionar un sistema Linux de una forma mas facil y amigable 
 
@@ -100,20 +87,8 @@ Y luego tenenmos administradores de ventanas en mosaico (Tilling Window), como p
 
 La primera imagen muestra un **Tiling Window** y la segunda muestra **Gnome**.
 
-<figure>
-  <img src="images/twindow.jpg" alt="TillingWindow">
-  <figcaption>
-    Fuente: imgur (https://imgur.com/gallery/i3-gaps-first-rice-wxBZFN5)
-  </figcaption>
-</figure>
-
-<figure>
-  <img src="images/gnome.png" alt="GnomeDesktop">
-  <figcaption>
-    Creacion Propia | CC BY-NC-SA 4.0
-  </figcaption>
-</figure>
-
+![tillinWindow](images/twindow.jpg)
+![Gnome](images/gnome.png)
 
 ## 6. Consolas 
 Linux dispone de 6 consolas virtuales, que pueden ser usadas para varias tareas desde la resolucion de problemas, la seguridad y la administracion o realizar multitarea sin usar una interfaz grafica 
@@ -131,12 +106,7 @@ Una shell es un intérprete de comandos que permite interactuar con el sistema o
 - **Friendly interactive shell (fish):** Se creó con el objetivo de ser amigable y fácil de usar nada más instalarla, incluye autocompletación, resaltado de sintaxis y sugerencias. 
 La siguiente imagen muestra fish con la personalización que tengo aplicada en mi sistema. 
 
-<figure>
-  <img src="images/fish.png" alt="Fish">
-  <figcaption>
-   Creacion Propia | CC BY-NC-SA 4.0
-  </figcaption>
-</figure>
+![fish](images/fish.png)
 
 ## 8. Dispositivos especiales 
 En linux existen una serie de dispositivos que se usan para la comunicacion entre programas estos son los flujos de informacion, y encontramos tres: 
@@ -204,12 +174,7 @@ Y estos tres bloques pueden tener tres nomenclaturas diferentes que definen los 
 - **w**: Write
 - **x**: Execute 
 
-<figure>
-  <img src="images/permisos.png" alt="PermisosSimbolicos">
-  <figcaption>
-    Fuente: sistemasyoperativos.com
-  </figcaption>
-</figure>
+![Permisos](images/permisos.png)
 
 - **chmod:** Cambia los permisos de un fichero; Se puede hacer uso de la notacion numerica o simbolica.
     - **En notacion simbolica:** la sintaxis es la siguiente ```chmod [permisos] [fichero] ```
@@ -219,17 +184,10 @@ Y estos tres bloques pueden tener tres nomenclaturas diferentes que definen los 
         - Los permisos se establecen asi: (Necesario saber los permisos ya existentes de un fichero)
         ```chmod 777 [fichero]``` Con este comando damos todos los permisos a todo 
 
-<figure>
-  <img src="images/permisosOctal.webp" alt="PermisosOctal">
-  <figcaption>
-    Fuente: devopscube.com
-  </figcaption>
-</figure>
+![PermisosOctal](images/permisosOctal.webp) 
 
 - **chown:** Cambia el propietario de un fichero o directorio 
 - **chgrp:** Cambia el grupo de un fichero o directorio 
-
-
 
 ### 11.6 Busqueda de ficheros y texto: 
 
