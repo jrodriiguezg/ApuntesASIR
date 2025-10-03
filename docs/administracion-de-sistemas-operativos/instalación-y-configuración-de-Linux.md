@@ -168,10 +168,28 @@ Estos son los comandos mas comunes en cuanto al manejo de ficheros en Linux
 - **tail:** Muestra las ultimas lineas de un fichero (10)
 
 ### 11.5 Permisos y propiedad:
+Los permisos en Linux se distribuyen en tres grupos **U** user, **G** group, **O** other; 
+Y estos tres bloques pueden tener tres nomenclaturas diferentes que definen los permisos, estos son: 
+- **r**: Read
+- **w**: Write
+- **x**: Execute 
 
-- **chmod:** Cambia los permisos de un fichero
+![Permisos](images/permisos.png)
+
+- **chmod:** Cambia los permisos de un fichero; Se puede hacer uso de la notacion numerica o simbolica.
+    - **En notacion simbolica:** la sintaxis es la siguiente ```chmod [permisos] [fichero] ```
+        - Los permisos se establecen asi: (si quiero dar permisos totales al usuario, quitar todos al grupo y dar solo lectura a otros, se haria asi)
+            ```chmod u+rwx, g-rwx, -wx-o+r [fichero]```
+    - **En notacion numerica o octal**
+        - Los permisos se establecen asi: (Necesario saber los permisos ya existentes de un fichero)
+        ```chmod 777 [fichero]``` Con este comando damos todos los permisos a todo 
+![Permisos](images/permisosOctal_2.png)
+![PermisosOctal](images/permisosOctal.webp) 
+
 - **chown:** Cambia el propietario de un fichero o directorio 
 - **chgrp:** Cambia el grupo de un fichero o directorio 
+
+
 
 ### 11.6 Busqueda de ficheros y texto: 
 
